@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PuzzleController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="567.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PuzzleController">
    <children>
       <Button fx:id="update" layoutX="245.0" layoutY="341.0" mnemonicParsing="false" onAction="#checkAnswer" text="Update answer" textFill="#0e32e8">
          <font>
@@ -26,7 +26,7 @@
       <TextField fx:id="answer" layoutX="55.0" layoutY="342.0" promptText="Enter answer here" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="214.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@/QuestionMark.jpg" />
+            <Image url="@../QuestionMark.jpg" />
          </image>
       </ImageView>
    </children>
