@@ -26,7 +26,7 @@
       <TextField fx:id="answer" layoutX="55.0" layoutY="342.0" promptText="Enter answer here" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="214.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../QuestionMark.jpg" />
+            <Image url="@/QuestionMark.jpg" />
          </image>
       </ImageView>
    </children>
