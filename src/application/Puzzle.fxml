@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PuzzleController">
+   <children>
+      <Button fx:id="update" layoutX="245.0" layoutY="341.0" mnemonicParsing="false" onAction="#checkAnswer" text="Update answer" textFill="#0e32e8">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="check" layoutX="55.0" layoutY="378.0" prefHeight="25.0" prefWidth="122.0" text="No answer yet">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Label fx:id="question" layoutX="61.0" layoutY="219.0" prefHeight="95.0" prefWidth="445.0" text="Question goes here" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="answer" layoutX="55.0" layoutY="342.0" promptText="Enter answer here" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="214.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/QuestionMark.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
