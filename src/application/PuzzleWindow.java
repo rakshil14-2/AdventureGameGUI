@@ -32,7 +32,7 @@ public class PuzzleWindow {
 //	        Parent root = FXMLLoader.load(getClass().getResource("Puzzle.fxml"));
 //	        root.getChildrenUnmodifiable().getClass()
 	        //Display window and wait for it to be closed before returning
-	        Scene scene = new Scene(root,567, 437);
+	        Scene scene = new Scene(root,800, 600);
 	        window.setScene(scene);
 	        window.showAndWait();
 	        return controller.isSolved();
