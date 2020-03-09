@@ -19,9 +19,22 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		Pane root = new Pane();
 		Button startButton = new Button("Start");
+		Button prop = new Button();
+		Prop p = new Prop("dddddddd",0,0);
+		prop.setOnAction(e->{
+			
+			PropWindow pr = new PropWindow();
+			try {
+				pr.display("title", p);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
 		startButton.setTranslateX(100);
 		startButton.setTranslateY(100);
 		root.getChildren().add(startButton);
+		root.getChildren().add(prop);
 		startButton.setOnAction(e->{
 			LevelWindow level = new LevelWindow();
 			Level level1 = new Level(1);
