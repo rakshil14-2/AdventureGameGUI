@@ -28,12 +28,12 @@ public class PuzzleController{
 	}
 	
 	public void checkAnswer() {
-		if(answer.getText().equals(puzzleAnswer)) {
-			check.setText("Your answer was Correct");
+		if(answer.getText().equalsIgnoreCase(puzzleAnswer)) {
+			check.setText("Your answer was Correct!");
 			solved = true;
 		}
 		else
-			check.setText("The answer you put was not the right answer. Please try again");
+			check.setText("The answer you put was not the right answer. Please try again!");
 	}
 
 	public Button getUpdate() {
