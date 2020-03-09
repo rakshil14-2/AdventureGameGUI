@@ -7,9 +7,9 @@ import javafx.scene.image.ImageView;
 
 public class PropController {
 	@FXML
-	Label propText;
+	private Label propText;
 	@FXML
-	ImageView img;
+	private ImageView img;
 	public Label getPropText() {
 		return propText;
 	}
