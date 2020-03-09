@@ -33,7 +33,7 @@ public class PuzzleController{
 			solved = true;
 		}
 		else
-			check.setText("The answer you put was not the right answer. Please try again");
+			check.setText("The answer you put was not the right answer. Please try again!");
 	}
 
 	public Button getUpdate() {
