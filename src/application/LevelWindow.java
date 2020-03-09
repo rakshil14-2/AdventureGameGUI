@@ -23,7 +23,7 @@ public class LevelWindow {
 		Group levelGroup = new Group();
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
-        window.setTitle(Integer.toString(lvlNumber));
+        window.setTitle("Level " + Integer.toString(lvlNumber));
         window.setWidth(800);
         window.setHeight(600);
 
@@ -79,7 +79,7 @@ public class LevelWindow {
 		openDoor.setTranslateY(500);
 		openDoor.setOnAction(new EventHandler<ActionEvent>() {
 		    @Override public void handle(ActionEvent e) {
-		    	if (puzzle1Solved && puzzle2Solved)
+		    	if (puzzle1Solved && puzzle2Solved && lvlNumber < 3)
 		    	{
 					LevelWindow levelWindow = new LevelWindow();
 					Level level = new Level(lvlNumber + 1);
@@ -89,6 +89,9 @@ public class LevelWindow {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
+		    	}
+		    	else if (lvlNumber == 3) {
+		    		// game over screen here
 		    	}
 		    	else {
 		    		doorLabel.setText("DOOR IS LOCKED");
