@@ -18,21 +18,23 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		Pane root = new Pane();
-		Button b = new Button();
-		root.getChildren().add(b);
-		b.setOnAction(e->{
-			PuzzleWindow p = new PuzzleWindow();
-			Puzzle puzzle = new Puzzle(0,0,"question","answer");
+		Button startButton = new Button("Start");
+		startButton.setTranslateX(100);
+		startButton.setTranslateY(100);
+		root.getChildren().add(startButton);
+		startButton.setOnAction(e->{
+			LevelWindow level = new LevelWindow();
+			Level level1 = new Level(1);
 			try {
-				p.display("Puzzle", puzzle);
+				level.display(1, level1);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		});
 		
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root,567, 437));
+        primaryStage.setTitle("Main Menu");
+        primaryStage.setScene(new Scene(root,800, 600));
         primaryStage.show();
 	}
 	
