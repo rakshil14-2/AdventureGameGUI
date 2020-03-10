@@ -38,7 +38,7 @@ public void padLockClick() {
 			PropWindow prop1 = new PropWindow();
 			prop = new Prop("ssss",1,1);
 			
-			prop1.display("Lock Puzzle", prop);
+			prop1.display("Medical document", prop,"/Phone.png");
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -59,7 +59,7 @@ public void padLockClick() {
 			PropWindow prop1 = new PropWindow();
 			prop = new Prop("ssss",1,1);
 			
-			prop1.display("Lock Puzzle", prop);
+			prop1.display("Voicmail", prop,"/Phone.png");
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

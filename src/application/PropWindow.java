@@ -9,7 +9,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class PropWindow {
-	public void display(String title,Prop p) throws IOException{
+	public void display(String title,Prop p,String url) throws IOException{
         Stage window = new Stage();
         
         //Block events to other windows
@@ -20,7 +20,7 @@ public class PropWindow {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Prop.fxml"));
         Parent root = loader.load();
         PropController controller = loader.<PropController>getController();
-        controller.setData(new Prop(p),"/Phone.png");
+        controller.setData(new Prop(p),url);
         
 //        Parent root = FXMLLoader.load(getClass().getResource("Puzzle.fxml"));
 //        root.getChildrenUnmodifiable().getClass()
