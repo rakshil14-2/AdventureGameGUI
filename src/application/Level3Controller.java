@@ -39,10 +39,10 @@ public void knifeClick() {
 
 	public void footnoteClick() {
 		try {
-			if(puzzle2Solved) {
+			if(puzzle1Solved) {
 				PropWindow prop1 = new PropWindow();
 				prop = new Prop("ssss",1,1);
-				prop1.display("Lock Puzzle", prop);
+				prop1.display("What does it mean??", prop,"/Phone.png");
 				label.setText("");
 				}
 			else {
@@ -69,7 +69,7 @@ public void knifeClick() {
 			PropWindow prop1 = new PropWindow();
 			prop = new Prop("ssss",1,1);
 			
-			prop1.display("Lock Puzzle", prop);
+			prop1.display("Diary notes", prop,"/Phone.png");
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
