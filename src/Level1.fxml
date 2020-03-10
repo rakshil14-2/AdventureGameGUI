@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Level1Controller">
+   <top>
+      <HBox prefHeight="17.0" prefWidth="800.0" style="-fx-background-color: #8E3302;" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="583.0" prefWidth="19.0" style="-fx-background-color: #8E3302;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="565.0" prefWidth="18.0" style="-fx-background-color: #8E3302;" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <HBox prefHeight="18.0" prefWidth="800.0" style="-fx-background-color: #8E3302;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #C1D6F6;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="invitaionPuzzle" fitHeight="115.0" fitWidth="120.0" layoutX="73.0" layoutY="220.0" onMouseClicked="#invitationClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Invitation.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="lockPuzzle" fitHeight="86.0" fitWidth="74.0" layoutX="92.0" layoutY="66.0" onMouseClicked="#lockClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@safeLock.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="notePuzzle" fitHeight="92.0" fitWidth="102.0" layoutX="296.0" layoutY="118.0" onMouseClicked="#noteClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Paper.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="door" fitHeight="150.0" fitWidth="200.0" layoutX="479.0" layoutY="201.0" onMouseClicked="#doorClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Door.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lockDoor" layoutX="447.0" layoutY="157.0" prefHeight="35.0" prefWidth="102.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
