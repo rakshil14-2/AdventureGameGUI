@@ -30,7 +30,9 @@ public void knifeClick() {
 	PuzzleWindow puzzle1Window = new PuzzleWindow();
 	Puzzle puzzle_2 = things.getPuzzle(2);
 	try {
-		puzzle2Solved = puzzle1Window.display("Puzzle", puzzle_2);
+		if(puzzle1Solved) {
+			puzzle2Solved = puzzle1Window.display("Who Is the Killer?", puzzle_2);
+		}
 	} catch (IOException e1) {
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
@@ -42,7 +44,7 @@ public void knifeClick() {
 			if(puzzle1Solved) {
 				PropWindow prop1 = new PropWindow();
 				prop = things.getProp(2);
-				prop1.display("What does it mean??", prop,"/Phone.png");
+				prop1.display("What does it mean??", prop,"/will.jpg");
 				label.setText("");
 				}
 			else {
@@ -58,7 +60,7 @@ public void knifeClick() {
 		PuzzleWindow puzzle1Window = new PuzzleWindow();
 		Puzzle puzzle_1 = things.getPuzzle(1);
 		try {
-			puzzle1Solved = puzzle1Window.display("Puzzle", puzzle_1);
+			puzzle1Solved = puzzle1Window.display("Small Notes", puzzle_1);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -66,10 +68,13 @@ public void knifeClick() {
 	}
 	public void diaryClick() {
 		try {
+			
 			PropWindow prop1 = new PropWindow();
 			prop = things.getProp(1);
+				
+			prop1.display("Diary notes", prop,"/Diary.jpg");
 			
-			prop1.display("Diary notes", prop,"/Phone.png");
+			
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

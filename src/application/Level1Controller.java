@@ -28,7 +28,7 @@ public class Level1Controller implements Initializable{
 		PuzzleWindow puzzle1Window = new PuzzleWindow();
 		Puzzle puzzle_1 = things.getPuzzle(2);
 		try {
-			puzzle1Solved = puzzle1Window.display("Puzzle", puzzle_1);
+			puzzle1Solved = puzzle1Window.display("Lock Puzzle", puzzle_1);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -38,7 +38,7 @@ public class Level1Controller implements Initializable{
 		try {
 			PuzzleWindow puzzle1 = new PuzzleWindow();
 			lock = things.getPuzzle(3);
-			puzzle3Solved = puzzle1.display("Lock Puzzle", lock);
+			puzzle3Solved = puzzle1.display("Note Cipher", lock);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -48,7 +48,7 @@ public class Level1Controller implements Initializable{
 		PuzzleWindow puzzle2Window = new PuzzleWindow();
 		Puzzle puzzle_2 = things.getPuzzle(1);
 		try {
-			puzzle2Solved = puzzle2Window.display("Puzzle", puzzle_2);
+			puzzle2Solved = puzzle2Window.display("Invitaion Puzzle", puzzle_2);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

@@ -19,18 +19,18 @@ import javafx.stage.Stage;
  */
 public class CharacterMovement {
 	
-	private static final int ROOM_WIDTH    = 800;
-	private static final int ROOM_HEIGHT   = 600;
-	private static final int START_POSITIONX= 100;
-	private static final int START_POSITIONY= 100;
+	private final int ROOM_WIDTH    = 800;
+	private final int ROOM_HEIGHT   = 600;
+	private final int START_POSITIONX= 100;
+	private final int START_POSITIONY= 100;
 
-    private static final String AVATAR_UP =
+    private final String AVATAR_UP =
             "squibbles.png";
-    private static final String AVATAR_LEFT =
+    private final String AVATAR_LEFT =
             "left.png";
-    private static final String AVATAR_RIGHT =
+    private final String AVATAR_RIGHT =
             "right.png";
-    private static final String AVATAR_DOWN =
+    private final String AVATAR_DOWN =
             "down.png";
     
    
