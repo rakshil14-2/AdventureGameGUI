@@ -1,21 +1,29 @@
 package application;
-
-import java.io.IOException;
 import java.util.ArrayList;
 
 
-
+/**
+ * 	Level class
+ * 	
+ * 	Currently contains the objects in the level
+ * 	Plan to implement more for the next demo 
+ * 
+ */
 public class Level {
 
+	/**
+	 *  attributes for the current game objects of the GUI version of the game,
+	 *  level number, intro and outro text, props, and puzzles
+	 */
 	private int levelNumber;
 	private String levelIntroText, levelExitText;
 	private ArrayList<Prop> props;
 	private ArrayList<Puzzle> puzzles;
-//	private ArrayList<Cipher> ciphers;
-//	private ArrayList<Trigger> triggers; 
-//	private Door door;
-//	private int playerStartX, playerStartY;	
-	
+
+	/*
+	 * Level constructor
+	 * @param lNum integer representing level number
+	 */
 	public Level(int lNum) {
 		
 		levelNumber = lNum;
@@ -28,7 +36,12 @@ public class Level {
 	}
 	
 	
-	
+	/**
+	 * getLevelIntroText is a private method to generate the introduction text for the levels
+	 * @param lvlNum integer representing the level number
+	 * @return String containing the level's intro text
+	 * 
+	 */
 	private String getLevelIntroText(int lvlNum) {
 		String introTxt = "";
 		switch(lvlNum) {
@@ -83,6 +96,12 @@ public class Level {
 		return outroTxt;		
 	}
 	
+	
+	/**
+	 * 	getPuzzles method returns arraylist of puzzles for each level
+	 * 	@param lvlNum integer represeting level number
+	 *  @return ArrayList of Puzzles for level
+	 */
 	private ArrayList<Puzzle> getPuzzles(int lvlNum){
 		ArrayList<Puzzle> puzList = new ArrayList<Puzzle>();
 		switch(lvlNum) {
@@ -158,6 +177,11 @@ public class Level {
 	}
 	
 	
+	/**
+	 * 	getProps method is a helper method to generate the levels props
+	 * 	@param lvlNum integer representing level number
+	 * 	@return ArrayList of Props for the level
+	 */
 	private ArrayList<Prop> getProps(int lvlNum){
 		ArrayList<Prop> propList = new ArrayList<Prop>();
 		switch(lvlNum) {
@@ -204,12 +228,22 @@ public class Level {
 		
 	}
 	
+	/**
+	 * 	getPuzzle method generates the levels puzzles
+	 * 	@param puzzleNum integer representing the puzzle in the array
+	 * 	@return Puzzle object
+	 */
 	public Puzzle getPuzzle(int puzzleNum) {
 		Puzzle tPuzzle;
 		tPuzzle = new Puzzle(puzzles.get(puzzleNum - 1));
 		return tPuzzle;
 	}
 	
+	/**
+	 *  getProp method generates the levels props
+	 *  @param propNum integer representing the prop in the array
+	 *  @return Prop object
+	 */	
 	public Prop getProp(int propNum) {
 		Prop tProp;
 		tProp = new Prop(props.get(propNum -1));
