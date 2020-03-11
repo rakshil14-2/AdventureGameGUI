@@ -26,7 +26,7 @@ public void padLockClick() {
 	PuzzleWindow puzzle1Window = new PuzzleWindow();
 	Puzzle puzzle_1 = things.getPuzzle(1);
 	try {
-		puzzle1Solved = puzzle1Window.display("Puzzle", puzzle_1);
+		puzzle1Solved = puzzle1Window.display("PadLock Puzzle", puzzle_1);
 	} catch (IOException e1) {
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
@@ -38,7 +38,7 @@ public void padLockClick() {
 			PropWindow prop1 = new PropWindow();
 			prop = things.getProp(2);
 			
-			prop1.display("Medical document", prop,"/Phone.png");
+			prop1.display("Medical document", prop,"/medical.jpg");
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -48,7 +48,7 @@ public void padLockClick() {
 		PuzzleWindow puzzle1Window = new PuzzleWindow();
 		Puzzle puzzle_2 = things.getPuzzle(2);
 		try {
-			puzzle2Solved = puzzle1Window.display("Puzzle", puzzle_2);
+			puzzle2Solved = puzzle1Window.display("Lock Puzzle", puzzle_2);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
