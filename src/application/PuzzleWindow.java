@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 
 public class PuzzleWindow {
-	    static boolean solved = false;
+	    boolean solved = false;
 		public boolean display(String title,Puzzle p) throws IOException{
 	        Stage window = new Stage();
 	        
