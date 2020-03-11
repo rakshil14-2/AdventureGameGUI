@@ -37,7 +37,7 @@ public class Level1Controller implements Initializable{
 	public void noteClick() {
 		try {
 			PuzzleWindow puzzle1 = new PuzzleWindow();
-			lock = new Puzzle(0,0,"q","a");
+			lock = things.getPuzzle(3);
 			puzzle3Solved = puzzle1.display("Lock Puzzle", lock);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block

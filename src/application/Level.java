@@ -9,7 +9,7 @@ public class Level {
 
 	private int levelNumber;
 	private String levelIntroText, levelExitText;
-//	private ArrayList<Prop> props;
+	private ArrayList<Prop> props;
 	private ArrayList<Puzzle> puzzles;
 //	private ArrayList<Cipher> ciphers;
 //	private ArrayList<Trigger> triggers; 
@@ -24,6 +24,7 @@ public class Level {
 		levelIntroText = getLevelIntroText(lNum);
 		levelExitText = getLevelOutroText(lNum);
 		puzzles = getPuzzles(lNum);
+		props = getProps(lNum);
 	}
 	
 	
@@ -110,8 +111,17 @@ public class Level {
 					"2  1  3  2  7  1  4  2 ", 
 					
 					"2678");
+			Puzzle puzzle1_3 = new Puzzle(0,0, "You open a drawer of Scarlett's desk and find some financial documents...\n"
+					+ " It looks right before Scarlett died, she changed her will so her entire fortune would go to \n"
+					+ "someone she had just met 2 weeks prior - her new romantic partner that she just began \r\n" + 
+					" seeing.\n"
+					+ "He was probably at the party too, but the only way to find out is to translate the \n"
+					+ "cipher that shows his name on this paper.\n\n"
+					+ "The hint is 'EJTKU'. And the algorithm is X(alphabetic index)-2.",
+					"Chris");
 			puzList.add(puzzle1_1);
 			puzList.add(puzzle1_2);
+			puzList.add(puzzle1_3);
 			break;
 
 		case 2:
@@ -130,11 +140,13 @@ public class Level {
 			puzList.add(puzzle2_2);
 			break;
 		case 3:
-			Puzzle puzzle3_1 = new Puzzle(0,0, "The last thing you see is a hand written note that pokes out of the bookshelf near where you found the diary. \r\n" + 
+			Puzzle puzzle3_1 = new Puzzle(0,0, "The last thing you see is a hand written note that pokes out of the bookshelf near\n"
+					+ "where you found the diary.\r\n" + 
 					"It reads:                \r\n" + 
 					"These numbers spell a word 411391287\r\n" + 
 					"CLUE: 91968968 = NONSENSE\r\n" + 
-					"*Hint: It might help to say the numbers in the clue out loud or in your head while you look at the word nonsense*", "Footnotes");
+					"*Hint: It might help to say the numbers in the clue out loud or in your head\n"
+					+ "while you look at the word nonsense*", "Footnotes");
 			Puzzle puzzle3_2 = new Puzzle(0,0, "To get out of this room and bring Scarlett's death justice, you must have this case completely cracked...\r\n" + 
 							"Enter the Murder's First Name below to escape and solve the mystery.", "Louie");
 			puzList.add(puzzle3_1);
@@ -145,10 +157,63 @@ public class Level {
 		return puzList;
 	}
 	
+	
+	private ArrayList<Prop> getProps(int lvlNum){
+		ArrayList<Prop> propList = new ArrayList<Prop>();
+		switch(lvlNum) {
+		case 2:
+			Prop prop2_1 = new Prop("You pick up the phone and give the voicemails a listen.\r\n" + 
+					"'This is the hospital calling. It's 10:00pm. Hewey has been in a serious car accident on the main highway, \r\n" + 
+					"and we are taking him into surgery right now. Please contact us at the hospital as soon as possible'\r\n" + 
+					"\r\n" + 
+					"Hewey left at 10:00pm! The murder was not until at least midnight according to our autopsy report. This \r\n" + 
+					"eliminates Hewey as a suspect.", 0, 0);
+			propList.add(prop2_1);
+			Prop prop2_2 = new Prop("In the file cabinet you find Dewey's medical documents... and you realize Dewey has been in a coma for 17 \r\n" + 
+					"days! This completely eliminates Dewey as a suspect.", 0,0);
+			propList.add(prop2_2);
+			break;
+
+		case 3:
+			Prop prop3_1 = new Prop("You begin sifting through the bookshelf for any traces of evidence when you pull out Scarlett's diary.\r\n" + 
+					"In her most recent entry before her passing, she wrote:\r\n" + 
+					"\r\n" + 
+					"December 13th, 1989\r\n" + 
+					"I know what is going to happen to me, and I know who will do it. My children do not visit anymore. \r\n" + 
+					"They only want what I have. I am changing my will to go to Chris, his family is in dire need of financial aid.\r\n" + 
+					"My children are going to be furious when I tell them, but they should earn their own place. \r\n" + 
+					"                                                        -Scarlett Johansson\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"This information is incredibly revealing. Scarlett claims to have willingly changed her inheritance to go to \r\n" + 
+					"Chris, but there's no proof that this was her true motive or whether or not there had been any outside pressures\r\n" + 
+					"making her say this. Also, who is to say they Louie even knew that she had changed it? Or who is to say that he\r\n" + 
+					"did not know? Louie could have known and murdered out of anger, or Louie could have not known, and murdered in\r\n" + 
+					"hopes of inheriting a fortune.", 0, 0);
+			Prop prop3_2 = new Prop("Footnotes... what could it mean? You start to retrace your steps and remember there was a footnote on the financial\r\n" + 
+					"documents that contained Scarlett's will. You open up your files to read the document again and on the very last\r\n" + 
+					"page there is a footnote that only contains the letter 'L'. It is subtle, easy to miss, but it is right under the\r\n" + 
+					"passage where Scarlett declared her fortune will no longer be going to her sons.\r\n" + 
+					"Head to the final door to attempt your escape.", 0, 0);
+			propList.add(prop3_1);
+			propList.add(prop3_2);
+			break;
+		}		
+		
+		return propList;
+		
+	}
+	
 	public Puzzle getPuzzle(int puzzleNum) {
 		Puzzle tPuzzle;
 		tPuzzle = new Puzzle(puzzles.get(puzzleNum - 1));
 		return tPuzzle;
 	}
-
+	
+	public Prop getProp(int propNum) {
+		Prop tProp;
+		tProp = new Prop(props.get(propNum -1));
+		return tProp;
+	}
+	
 }

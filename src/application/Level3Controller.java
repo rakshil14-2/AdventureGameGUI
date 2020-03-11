@@ -41,7 +41,7 @@ public void knifeClick() {
 		try {
 			if(puzzle1Solved) {
 				PropWindow prop1 = new PropWindow();
-				prop = new Prop("ssss",1,1);
+				prop = things.getProp(2);
 				prop1.display("What does it mean??", prop,"/Phone.png");
 				label.setText("");
 				}
@@ -67,7 +67,7 @@ public void knifeClick() {
 	public void diaryClick() {
 		try {
 			PropWindow prop1 = new PropWindow();
-			prop = new Prop("ssss",1,1);
+			prop = things.getProp(1);
 			
 			prop1.display("Diary notes", prop,"/Phone.png");
 		} catch (IOException e1) {

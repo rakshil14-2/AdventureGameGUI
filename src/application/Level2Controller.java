@@ -36,7 +36,7 @@ public void padLockClick() {
 		try {
 			
 			PropWindow prop1 = new PropWindow();
-			prop = new Prop("ssss",1,1);
+			prop = things.getProp(2);
 			
 			prop1.display("Medical document", prop,"/Phone.png");
 		} catch (IOException e1) {
@@ -57,7 +57,7 @@ public void padLockClick() {
 	public void phoneClick() {
 		try {
 			PropWindow prop1 = new PropWindow();
-			prop = new Prop("ssss",1,1);
+			prop = things.getProp(1);
 			
 			prop1.display("Voicmail", prop,"/Phone.png");
 		} catch (IOException e1) {
