@@ -78,7 +78,7 @@ public void knifeClick() {
 	public void doorClick(MouseEvent e) throws IOException {
 		if ( puzzle1Solved && puzzle2Solved )
     	{
-			Parent root = FXMLLoader.load(getClass().getResource("/GameOver.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/Won.fxml"));
 			Scene gameover=new Scene(root,600,400);
 			Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
 			window.setScene(gameover);
