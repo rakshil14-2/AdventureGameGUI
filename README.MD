@@ -125,42 +125,36 @@ provide clues and must be solved in order to escape and win the game.
 -------------
 # VII. Classes:
 -------------
-CharacterMovement: 
-	moves an avatar in the window​
-GameClock: 
-	checks time and gives you the time you have left finish the game ​
-GameOverController: 
-	changes scene back to main menu after clock runs out​
-Level: 
-	contains all intro texts, props and puzzles​
-Level1Controller: 
-	handles image clicks and checks that the puzzles in level 1 are all solved 
-	before allowing door to open and begin level 2​
-Level2Controller: 
-	handles image clicks and checks that the puzzles in level 2 are all solved 
-	before allowing door to open and begin level 3​
-Level3Controller: 
-	handles image clicks and checks that the puzzles in level 3 are all solved 
-	before allowing user to go to winning scene​
-Main: 
-	opens an fxml file called main​
-Main Menu Controller: 
-	handles button clicks and changes the scene​
-Prop: 
-	an object with an x,y value and a description​
-Prop Controller: 
-	gets the prop object images and text​
-Prop Window: 
-	when prop button is clicked opens a new window with prop description and 
-	image​
-Puzzle: 
-	an object with an x,y value, question and answer​
-Puzzle Controller: 
-	gets the puzzle question, answer and handles user input from the text field
-	to check if it is solved​
-Puzzle Window: 
-	when puzzle button is clicked opens a new window with a question and text 
-	field for user to input their answer
+* CharacterMovement: 
+	* moves an avatar in the window​
+* GameClock: 
+	* checks time and gives you the time you have left finish the game ​
+* GameOverController: 
+	* changes scene back to main menu after clock runs out​
+* Level: 
+	* contains all intro texts, props and puzzles​
+* Level1Controller: 
+	* handles image clicks and checks that the puzzles in level 1 are all solved  before allowing door to open and begin level 2​
+* Level2Controller: 
+	 * handles image clicks and checks that the puzzles in level 2 are all solved before allowing door to open and begin level 3​
+* Level3Controller: 
+	 * handles image clicks and checks that the puzzles in level 3 are all solved  before allowing user to go to winning scene​
+* Main: 
+	 * opens an fxml file called main​
+* Main Menu Controller: 
+	* handles button clicks and changes the scene​
+* Prop: 
+	* an object with an x,y value and a description​
+* Prop Controller: 
+	* gets the prop object images and text​
+* Prop Window: 
+	* when prop button is clicked opens a new window with prop description and image​
+* Puzzle: 
+	* an object with an x,y value, question and answer​
+* Puzzle Controller: 
+	* gets the puzzle question, answer and handles user input from the text field to check if it is solved​
+* Puzzle Window: 
+	* when puzzle button is clicked opens a new window with a question and text field for user to input their answer
 
 -------------------
 # VIII. Contributors:
