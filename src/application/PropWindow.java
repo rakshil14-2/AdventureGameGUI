@@ -17,13 +17,13 @@ public class PropWindow {
         window.setTitle(title);
         window.setMinWidth(250);
         
+        // load the scene from the Prop.fxml file
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Prop.fxml"));
         Parent root = loader.load();
         PropController controller = loader.<PropController>getController();
         controller.setData(new Prop(p),url);
         
-//        Parent root = FXMLLoader.load(getClass().getResource("Puzzle.fxml"));
-//        root.getChildrenUnmodifiable().getClass()
+
         //Display window and wait for it to be closed before returning
         Scene scene = new Scene(root,800, 600);
         window.setScene(scene);
