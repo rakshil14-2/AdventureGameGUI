@@ -1,0 +1,162 @@
+README.txt
+
+I. How To Download:
+-------------------
+	AdventureGameGUI.java source files can ba downloaded from:
+		https://github.com/pkohoutek/AdventureGameGUI
+
+	Source code is all located in the Project /src folder.
+	The package application in the /src ffolder contains all the classes and the
+	other necessary files (mostly jpgs,pngs and fxml files) are not in the package
+	but are in the /src folder.
+
+
+II. How To Compile:
+-------------------
+	OpenJavaFX software is needed to run the program. Install here:
+		https://openjfx.io/openjfx-docs/#install-java
+	
+	Add an environment variable pointing to the lib directory of the runtime
+	using the terminal or the command prompt:
+
+	Linux/Mac:
+		export PATH_TO_FX=path/to/javafx-sdk-14/lib
+	Windows:
+		set PATH_TO_FX="path\to\javafx-sdk-14\lib"
+
+	You can now compile and run JavaFX applications from the command line using
+	the JavaFX runtime.
+
+	Linux/Mac:
+		To compile AdventureGameGUI run the following in the terminal:
+			javac --module-path $PATH_TO_FX --add-modules javafx.controls,
+			javafx.fxml AdventureGameGUI.java
+
+	Windows:
+		To compile AdventureGameGUI run the following in the command prompt:
+			javac --module-path %PATH_TO_FX% --add-modules javafx.controls,
+			javafx.fxml AdventureGameGUI.java
+
+III. How To Run:
+-----------------
+
+	Linux/Mac:
+		To run AdventureGameGUI run the following in the terminal:
+			java --module-path $PATH_TO_FX --add-modules javafx.controls,
+			javafx.fxml AdventureGameGUI
+
+	Windows:
+		To run AdventureGameGUI run the following in the command prompt:
+			java --module-path %PATH_TO_FX% --add-modules javafx.controls,
+			javafx.fxml AdventureGameGUI
+
+--------------------------------------
+IV. Files Included With This Project:
+--------------------------------------
+
+CharacterMovement.java			ComboLock.png			.classpath	
+GameClock.java				Diary.jpg			.project
+GameOverController.java			Diary.png			build.fxbuild
+Level.java				Door.png
+Level1Controller.java			Footenote.png
+Level2Controller.java			GameOver.fxml
+Level3Controller.java			GameOver.jpg
+Main.java				Home.fxml
+MainMenuController.java			Invitation.png
+Prop.fxml				KeypadLock.png
+Prop.java				Knife.png
+PropController.java			Level1.fxml
+PropWindow.java				Level2.fxml
+Puzzle.fxml				Level3.fxml
+Puzzle.java				MainMenu.fxml
+PuzzleController.java			MedicalDoc.png
+PuzzleWindow.java			Note.png
+application.css				Paper.png
+					Phone.png
+					QuestionMark.jpg
+					SecurityCode.png
+					Solved.jpg
+					Telephone.png
+					Won.fxml
+					down.png
+					left.png
+					mansion.jpg
+					medical.jpg
+					right.png
+					safeLock.jpg
+					squibbles.png
+					will.jpg
+
+-------------
+V. Libraries:
+-------------
+
+The program uses open javafx 12. The program AdventureGameGUI will not compile/run on
+devices that do not use open javafx.
+
+-----------------------------------
+VI. Game Description + Information:
+-----------------------------------
+
+AdventureGameGUI is a adventure game where you are trapped in a room playing in the
+role of a detective trying to solve a murder mystery. Various props and puzzles will
+provide clues and must be solved in order to escape and win the game.
+
+-------------
+VII. Classes:
+-------------
+CharacterMovement: 
+	moves an avatar in the window​
+GameClock: 
+	checks time and gives you the time you have left finish the game ​
+GameOverController: 
+	changes scene back to main menu after clock runs out​
+Level: 
+	contains all intro texts, props and puzzles​
+Level1Controller: 
+	handles image clicks and checks that the puzzles in level 1 are all solved 
+	before allowing door to open and begin level 2​
+Level2Controller: 
+	handles image clicks and checks that the puzzles in level 2 are all solved 
+	before allowing door to open and begin level 3​
+Level3Controller: 
+	handles image clicks and checks that the puzzles in level 3 are all solved 
+	before allowing user to go to winning scene​
+Main: 
+	opens an fxml file called main​
+Main Menu Controller: 
+	handles button clicks and changes the scene​
+Prop: 
+	an object with an x,y value and a description​
+Prop Controller: 
+	gets the prop object images and text​
+Prop Window: 
+	when prop button is clicked opens a new window with prop description and 
+	image​
+Puzzle: 
+	an object with an x,y value, question and answer​
+Puzzle Controller: 
+	gets the puzzle question, answer and handles user input from the text field
+	to check if it is solved​
+Puzzle Window: 
+	when puzzle button is clicked opens a new window with a question and text 
+	field for user to input their answer
+
+-------------------
+VIII. Contributors:
+-------------------
+
+Program written by:
+
+	Group 9 ~ Tutorial 2
+	
+	Paul
+	Azhar
+	Carlo
+	Delara
+	Claire 
+
+		for CPSC 233 Project, Winter Semester 2020.
+
+​
+
