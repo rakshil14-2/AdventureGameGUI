@@ -41,8 +41,10 @@ public class MainMenuController {
 	 * @throws IOException on loading the fxml file
 	 */
 	public void startClick(ActionEvent e) throws IOException {
+		// load the scene from the Level1.fxml file
 		Parent root = FXMLLoader.load(getClass().getResource("/Level1.fxml"));
 		Scene gameover=new Scene(root,600,400);
+		// get the window that has the button in it and change the scene in it to level 1 scene
 		Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
 		window.setScene(gameover);
 		window.show();
