@@ -13,9 +13,20 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-
+/**
+ * This class will create a new window that will pop up when the user clicks on any puzzle
+ * @author Delara
+ *
+ */
 public class PuzzleWindow {
-	    boolean solved = false;
+	    private boolean solved = false;
+	    /**
+	     * This method creates a new window by getting a title, and a Puzzle object from the user
+	     * @param title this will be the title of the window
+	     * @param p a Puzzle object used to get the answer and the question for the window
+	     * @return boolean this checks to see if the user input the correct answer for the puzzle
+	     * @throws IOException for loading the puzzle.fxml file
+	     */
 		public boolean display(String title,Puzzle p) throws IOException{
 	        Stage window = new Stage();
 	        
@@ -29,8 +40,7 @@ public class PuzzleWindow {
 	        PuzzleController controller = loader.<PuzzleController>getController();
 	        controller.setData(new Puzzle(p));
 	        
-//	        Parent root = FXMLLoader.load(getClass().getResource("Puzzle.fxml"));
-//	        root.getChildrenUnmodifiable().getClass()
+
 	        //Display window and wait for it to be closed before returning
 	        Scene scene = new Scene(root,800, 600);
 	        window.setScene(scene);
