@@ -20,7 +20,7 @@ public class Level {
 	private ArrayList<Prop> props;
 	private ArrayList<Puzzle> puzzles;
 
-	/*
+	/**
 	 * Level constructor
 	 * @param lNum integer representing level number
 	 */
