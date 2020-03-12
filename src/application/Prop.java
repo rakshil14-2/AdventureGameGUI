@@ -3,66 +3,72 @@ package application;
 public class Prop {
 	
 	
-	/*
+	/**
 	 * 		Prop Class
 	 * 		creates objects on the map for the player to interact with.
 	 * 		Typically in game development props are non-interactive but due to
 	 * 		the limitation of a text game props are interactive to add more atmosphere to game
 	 */
 	
+	/**
+	 * 	Prop class attributes
+	 * 	xPos/yPos for interaction on map once collision detection is implemented
+	 * 	description is a string containing the props text
+	 */
 	private int xPos = 0;
 	private int yPos = 0;
-
-	private String sSprite = "";
 	private String description  = "Put object descriptive text here."
 			+ "\n eg. \"You look at an old oak bookcase, you note that it is"
 			+ " full of books on the ocult.";
 
 
 
-	// prop coping constructor
+	/**
+	 * prop copy constructor
+	 * @param prop Prop object to be copied
+	 */
 	public Prop(Prop prop)
 	{
 		xPos = prop.getX();
 		yPos = prop.getY();
-		sSprite = prop.getSprite();
 		description = prop.getDescription();	
 	}
 	
 	
-	// story prop / trigger
-	// can be split and moved to a child classes
+	/**
+	 *  Prop object constructor
+	 * @param des prop description text
+	 * @param x integer representing x position
+	 * @param y integer representing y position
+	 */
 	public Prop(String des, int x, int y) {
 		xPos = x;
 		yPos = y;
-		description = des;
-		sSprite = "$";		
+		description = des;	
 	} 
 	
 	
-	// gets prop description string
+	/**
+	 * getDescription gets prop description string
+	 * @return string representing the description of the Prop object
+	 */
 	public String getDescription() {
 		return description;
 	}
 	
-	// prints prop description to screen
-	public void printDescription()
-	{
-		System.out.println(description);
-	}
-		
-	// gets the String representation of the sprite (can change type to Sprite when we move to JavaFX),
-	// for scalability
-	public String getSprite() {
-		return sSprite;
-	}
 	
-	// get prop x value
+	/**
+	 *  getX getter for prop x value
+	 * @return int X position
+	 */
 	public int getX() {
 		return xPos;
 	}
 	
-	// get prop y value
+	/**
+	 * getY getter for prop y value
+	 * @return int Y position
+	 */
 	public int getY() {
 		return yPos;
 	}

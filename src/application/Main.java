@@ -20,7 +20,12 @@ import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-
+/**
+ * 
+ * Main class for game
+ * Launches main menu to start a new game
+ *
+ */
 public class Main extends Application {
 
     public static void main(String[] args) {

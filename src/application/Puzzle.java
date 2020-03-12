@@ -3,20 +3,27 @@ import java.util.Scanner;
 
 public class Puzzle {
 	
-	/*		Puzzle Class
-	 * 
+	/**
+	 * 		Puzzle Class
 	 * 		Players solve puzzles and by solving puzzles
-	 * 		are able to unlock the level door to move on to the next level	 * 
+	 * 		are able to unlock the level door to move on to the next level.
 	 */
 	
 	
-	
+	/**
+	 * 	Puzzle attributes including the question and answer strings,
+	 * 	boolean solved, and x,y coordinates for when we do collisions and
+	 *  hit detection.
+	 */
 	private boolean solved;
 	private int xPos;
 	private int yPos;
 	private String question, answer;
-	private String sSprite = "?";
 	
+	/**
+	 * Puzzle copy constructor
+	 * @param p Puzzle to be copied
+	 */
 	public Puzzle(Puzzle p) {
 		this.answer = p.answer ;
 		this.question = p.question;
@@ -24,6 +31,14 @@ public class Puzzle {
 		this.yPos = p.yPos;
 		this.solved = p.solved;
 	}
+	
+	/**
+	 * Puzzle class constructor
+	 * @param _x int for puzzles x value
+	 * @param _y int for puzzles y value
+	 * @param q String for puzzle's question
+	 * @param a String for puzzle's answer
+	 */
 	public Puzzle(int _x,int _y,String q,String a) {
 		this.xPos = _x;
 		this.yPos = _y;
@@ -32,70 +47,55 @@ public class Puzzle {
 		solved = false;
 	}
 	
-	// helper method to check answer
-	private boolean checkAns(String tempAns) {
-		return tempAns.equalsIgnoreCase(answer);
-	}
 	
-	// method to play the puzzle
-	public void playPuzzle() {
-		System.out.println(question);
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter your answer or press 'Q' to quit");
-		String ans = input.nextLine();
-		ans = "" + ans.trim();
-		if (ans.equalsIgnoreCase("Q")){
-			return;
-		}
-		while(!checkAns(ans)) {
-			System.out.println("Your answer was wrong! Please try again.");
-			System.out.println("Enter your answer or press 'Q' to quit");
-			ans = input.nextLine();
-			if (ans.equalsIgnoreCase("Q")){
-				return;
-			}
-		}
-		System.out.println("Correct!");
-		setSolved();		
-	}
-	
-	// getter to check if puzzle is solved
+	/**
+	 *  isSolved is a getter to check if puzzle is solved
+	 * @return boolean true if puzzle is solved
+	 */
 	public boolean isSolved() {
 		return solved;
 	}
 	
-	// getter for puzzles x position on map
+	/**
+	 * getX getter for puzzles x position on map (not currently implemented)
+	 * @return integer of puzzle's x position (will change to double for GUI)
+	 */
 	public int getX()
 	{
 		return xPos;
 	}	
 	
-	// getter for puzzles y position on map
+	/**
+	 *  getY getter for puzzles y position on map
+	 * @return integer of puzzle's y position (will change to double for GUI)
+	 */
 	public int getY() {
 		return yPos;
 	}
 	
-	// getter for puzzle question
+	/**
+	 * getQuestion getter for puzzle question
+	 * @return String of puzzles question
+	 */
 	public String getQuestion() {
 		return question;
 	}
 	
-	// getter for puzzle answer
+	/**
+	 * getAnswer is a getter for puzzle answer
+	 * @return string of puzzle's answer
+	 */
 	public String getAnswer() {
 		return answer;
 	}
 	
-	// getter for string representation of the puzzle sprite
-	public String getSprite() {
-		return sSprite;
-	}
 	
-	// setter to set the puzzle as solved
+	/**
+	 *  setSolved is a setter to set the puzzle as solved
+	 */
 	public void setSolved() {
 		solved = true;
 	}
-	
-
 	
 	
 }
