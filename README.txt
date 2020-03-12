@@ -30,12 +30,12 @@ II. How To Compile:
 	Linux/Mac:
 		To compile AdventureGameGUI run the following in the terminal:
 			javac --module-path $PATH_TO_FX --add-modules javafx.controls,
-			javafx.fxml AdventureGameGUI.java
+			javafx.fxml Main.java
 
 	Windows:
 		To compile AdventureGameGUI run the following in the command prompt:
 			javac --module-path %PATH_TO_FX% --add-modules javafx.controls,
-			javafx.fxml AdventureGameGUI.java
+			javafx.fxml Main.java
 
 III. How To Run:
 -----------------
