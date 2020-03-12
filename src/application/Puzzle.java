@@ -47,14 +47,6 @@ public class Puzzle {
 		solved = false;
 	}
 	
-	/**
-	 * checkAns is helper method to check answer.
-	 * @param tempAns String representing users answer
-	 * @return boolean if answer is correct
-	 */
-	private boolean checkAns(String tempAns) {
-		return tempAns.equalsIgnoreCase(answer);
-	}
 	
 	/**
 	 *  isSolved is a getter to check if puzzle is solved
