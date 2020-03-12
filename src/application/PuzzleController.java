@@ -1,5 +1,9 @@
 package application;
 
+/**
+ * This method handles the puzzle window actions
+ * @author Delara
+ */
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -12,21 +16,46 @@ import javafx.scene.control.TextField;
 public class PuzzleController{
 	
 	@FXML
-	Button update;
+	private Button update;
 	@FXML
-	Label check;
+	private Label check;
 	@FXML
-	TextField answer;
+	private TextField answer;
 	@FXML
-	Label question;
+	private Label question;
 	
 	private boolean solved = false;
-	String puzzleAnswer;
+	/**
+	 * getter for the instance variable is solved
+	 * @return boolean solved
+	 */
+	public boolean isSolved() {
+		return solved;
+	}
+
+	/**
+	 * setter for the instance variable is solved
+	 * @param boolean solved
+	 */
+	public void setSolved(boolean solved) {
+		this.solved = solved;
+	}
+
+	private String puzzleAnswer;
+	
+	/**
+	 * This methods gets a Puzzle object and change the instance variables to that
+	 * @param p is an object Puzzle for which a new window is created
+	 */
 	public	void setData(Puzzle p) {
 		question.setText(p.getQuestion());
 		puzzleAnswer = p.getAnswer();
 	}
 	
+	/**
+	 * This method handles the update answer button in the puzzle window 
+	 * It checks to see if the user inputed the correct answer in the text field and will change the label according to that
+	 */
 	public void checkAnswer() {
 		if(answer.getText().equalsIgnoreCase(puzzleAnswer)) {
 			check.setText("Your answer was Correct!");
@@ -36,52 +65,5 @@ public class PuzzleController{
 			check.setText("The answer you put was not the right answer. Please try again!");
 	}
 
-	public Button getUpdate() {
-		return update;
-	}
-
-	public void setUpdate(Button update) {
-		this.update = update;
-	}
-
-	public Label getCheck() {
-		return check;
-	}
-
-	public void setCheck(Label check) {
-		this.check = check;
-	}
-
-	public TextField getAnswer() {
-		return answer;
-	}
-
-	public void setAnswer(TextField answer) {
-		this.answer = answer;
-	}
-
-	public Label getQuestion() {
-		return question;
-	}
-
-	public void setQuestion(Label question) {
-		this.question = question;
-	}
-
-	public boolean isSolved() {
-		return solved;
-	}
-
-	public void setSolved(boolean solved) {
-		this.solved = solved;
-	}
-
-	public String getPuzzleAnswer() {
-		return puzzleAnswer;
-	}
-
-	public void setPuzzleAnswer(String puzzleAnswer) {
-		this.puzzleAnswer = puzzleAnswer;
-	}
 	
 }

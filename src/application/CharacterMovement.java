@@ -1,10 +1,13 @@
 package application;
 
+import java.io.IOException;
+
 //Import libraries
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.image.*;
 import javafx.scene.image.Image;
@@ -49,7 +52,7 @@ public class CharacterMovement {
     boolean speedy, moveUp, moveDown, moveRight, moveLeft;
 
 
-    public void movement(){
+    public void movement() {
     	
     	//Image avatar1 = new Image();
         Stage window = new Stage();
@@ -69,15 +72,14 @@ public class CharacterMovement {
 
         Group map = new Group(avatar);   
         
-        
-        
+       
         
         
         moveAvatarTo(START_POSITIONX , START_POSITIONY);
 
-     
+        
         Scene scene = new Scene(map, ROOM_WIDTH, ROOM_HEIGHT, Color.LIGHTBLUE);
-
+        
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
