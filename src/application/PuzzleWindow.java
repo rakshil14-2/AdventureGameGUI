@@ -34,7 +34,7 @@ public class PuzzleWindow {
 	        window.initModality(Modality.APPLICATION_MODAL);
 	        window.setTitle(title);
 	        window.setMinWidth(250);
-	        
+	        // load the scene from the Puzzle.fxml file
 	        FXMLLoader loader = new FXMLLoader(getClass().getResource("Puzzle.fxml"));
 	        Parent root = loader.load();
 	        PuzzleController controller = loader.<PuzzleController>getController();
