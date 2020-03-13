@@ -9,45 +9,60 @@
 	other necessary files (mostly jpgs,pngs and fxml files) are not in the package
 	but are in the /src folder.
 
-
-# II. How To Compile:
+# II-A. How To Run in Eclipse:
 -------------------
-	OpenJavaFX software is needed to run the program. Install here:
+	* OpenJavaFX and software is needed to run the program in Eclipse. Follow the guide here:
+		* https://openjfx.io/openjfx-docs/#IDE-Eclipse
+	
+	* To get Java 12 support, install the patch from the Eclipse MarketPlace: Java 12 Support for Eclipse 2019-03 (4.11).
+
+	* Download an appropriate JDK (version 8 or above) for your operating system and set JAVA_HOME to the JDK directory.
+
+	* Include the new JDK as Installed JREs in Eclipse -> Preferences -> Java -> Installed JREs -> Add.
+		
+	* Download the appropriate JavaFX SDK for your operating system and unzip it to a desired location, for instance /Users/your-
+	user/Downloads/javafx-sdk-14. Download JavaFX here: https://gluonhq.com/products/javafx/
+	
+	* Create a new User Library under Eclipse -> Window -> Preferences -> Java -> Build Path -> User Libraries -> New.
+	
+	* Name it JavaFX14 and include the jars under the lib folder from JavaFX 14.
+	
+	* Add VM Argument in Eclipse. Click on Run -> Run Configurations...  -> Java Application, create a new launch configuration for the project and add these VM arguments:
+		* Linux/Mac:
+			* --module-path /path/to/javafx-sdk-14/lib --add-modules javafx.controls,javafx.fxml
+		* Windows:
+			* --module-path "\path\to\javafx-sdk-14\lib" --add-modules javafx.controls,javafx.fxml
+	
+	Now you can run the project from Eclipse.
+	
+# II-B. How To Compile:
+-------------------
+	* OpenJavaFX software is needed to run the program. Install here:
 		https://openjfx.io/openjfx-docs/#install-java
 	
-	Add an environment variable pointing to the lib directory of the runtime
-	using the terminal or the command prompt:
+	* Add an environment variable pointing to the lib directory of the runtime using the terminal or the command prompt:
+		* Linux/Mac:
+			* export PATH_TO_FX=path/to/javafx-sdk-14/lib
+		* Windows:
+			* set PATH_TO_FX="path\to\javafx-sdk-14\lib"
 
-	Linux/Mac:
-		export PATH_TO_FX=path/to/javafx-sdk-14/lib
-	Windows:
-		set PATH_TO_FX="path\to\javafx-sdk-14\lib"
+	You can now compile and run JavaFX applications from the command line using the JavaFX runtime.
+	## To Compile:
+	* Linux/Mac:
+		* To compile AdventureGameGUI run the following in the terminal:
+			* javac --module-path $PATH_TO_FX --add-modules javafx.controls, javafx.fxml Main.java
 
-	You can now compile and run JavaFX applications from the command line using
-	the JavaFX runtime.
+	* Windows:
+		* To compile AdventureGameGUI run the following in the command prompt:
+			* javac --module-path %PATH_TO_FX% --add-modules javafx.controls, javafx.fxml Main.java
+	## To Run:
+	* Linux/Mac:
+		* To run AdventureGameGUI run the following in the terminal:
+			* java --module-path $PATH_TO_FX --add-modules javafx.controls, javafx.fxml AdventureGameGUI
 
-	Linux/Mac:
-		To compile AdventureGameGUI run the following in the terminal:
-			javac --module-path $PATH_TO_FX --add-modules javafx.controls,
-			javafx.fxml Main.java
-
-	Windows:
-		To compile AdventureGameGUI run the following in the command prompt:
-			javac --module-path %PATH_TO_FX% --add-modules javafx.controls,
-			javafx.fxml Main.java
-
-# III. How To Run:
------------------
-
-	Linux/Mac:
-		To run AdventureGameGUI run the following in the terminal:
-			java --module-path $PATH_TO_FX --add-modules javafx.controls,
-			javafx.fxml AdventureGameGUI
-
-	Windows:
-		To run AdventureGameGUI run the following in the command prompt:
-			java --module-path %PATH_TO_FX% --add-modules javafx.controls,
-			javafx.fxml AdventureGameGUI
+	* Windows:
+		* To run AdventureGameGUI run the following in the command prompt:
+			* java --module-path %PATH_TO_FX% --add-modules javafx.controls, javafx.fxml AdventureGameGUI
 
 --------------------------------------
 # IV. Files Included With This Project:
