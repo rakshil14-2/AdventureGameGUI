@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  * Hold down the shift key to have the avatar run.
  */
 
-public class CharacterMovement extends Application {
+public class CharacterMovement  {
 	
 	/**
 	 * Character Movement Class
@@ -77,10 +77,10 @@ public class CharacterMovement extends Application {
      * 		  puts avatar to start position
      * 		  makes avatar a group to inherit the images/positions
      */
-    @Override
-    public void start(Stage stage) throws Exception {
+
+    public void movement() {
     	
-    	
+    	Stage window = new Stage();
     	avatar = new ImageView();
     	
         avatarUp = new Image(AVATAR_UP);
@@ -90,28 +90,23 @@ public class CharacterMovement extends Application {
 
         avatar.setImage(avatarLeft);
       
-        Group map = new Group(avatar);
+
+        Group map = new Group(avatar);   
+        
+       
+        
         
         moveAvatarTo(START_POSITIONX , START_POSITIONY);
 
+        
         Scene scene = new Scene(map, ROOM_WIDTH, ROOM_HEIGHT, Color.LIGHTBLUE);
-
-       
-        /**
-         * handles what program does when key events with each arrow key occur.
-         * When up key is pressed move up and change image to up image, 
-         * down key pressed move avatar down and change avatar to down image,
-         * left key pressed move avatar left and change avatar to left image, 
-         * right key pressed move avatar right and change avatar to right image.
-         * When shift key is pressed move avatar at faster speed.
-         * each case checks a boolean and then
-         * @param event is a KeyEvent for the arrow keys and shift button. 
-         */
         
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-            		
+            	
+ 
+            	
                 switch (event.getCode()) {
                 case UP:    moveUp = true; avatar.setImage(avatarUp) ;break;
                 case DOWN:  moveDown = true; avatar.setImage(avatarDown); break;
@@ -123,11 +118,6 @@ public class CharacterMovement extends Application {
             }
         });
 
-        /**
-         * handles what program does when key events are not occurring.
-         * @param event is a KeyEvent for the arrow keys and shift button.
-         */
-        
         scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -139,23 +129,15 @@ public class CharacterMovement extends Application {
                     case SHIFT: speedy = false; break;
                 }
             }
+            
+            
         });
 
-        stage.setScene(scene);
-        stage.show();
-        
-        /**
-         * Times animation 
-         * (movement)
-         */
+        window.setScene(scene);
+        window.show();
+
         AnimationTimer timer = new AnimationTimer() {
-          
-        	/**
-            * Here handle method handles the distance in pixels to move the avatar
-            * based on the booleans of whether the key events are happening.
-            */
-        	
-        	@Override
+            @Override
             public void handle(long now) {
                 int dx = 0, dy = 0;
 
@@ -207,9 +189,4 @@ public class CharacterMovement extends Application {
         }
     }
 
-   /**
-    * Launches class/program
-    * @param args takes the arguments of String and launches them (launches program)
-    */
-    public static void main(String[] args) { launch(args); }
 }
