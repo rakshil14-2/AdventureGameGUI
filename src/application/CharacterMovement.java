@@ -70,7 +70,7 @@ public class CharacterMovement  {
     boolean speedy, moveUp, moveDown, moveRight, moveLeft;
 
     /**
-     * start: sets up initial images
+     * movement: sets up initial images
      * 		  sets scene 
      * 		  handles key events
      * 		  uses switch statements with cases and booleans in event handlers 
@@ -101,11 +101,20 @@ public class CharacterMovement  {
         
         Scene scene = new Scene(map, ROOM_WIDTH, ROOM_HEIGHT, Color.LIGHTBLUE);
         
+        /**
+         * handles what program does when key events with each arrow key occur.
+         * When up key is pressed move up and change image to up image, 
+         * down key pressed move avatar down and change avatar to down image,
+         * left key pressed move avatar left and change avatar to left image, 
+         * right key pressed move avatar right and change avatar to right image.
+         * When shift key is pressed move avatar at faster speed.
+         * each case checks a boolean and then
+         * @param event is a KeyEvent for the arrow keys and shift button. 
+         */
+        
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
-            public void handle(KeyEvent event) {
-            	
- 
+            public void handle(KeyEvent event) {          	
             	
                 switch (event.getCode()) {
                 case UP:    moveUp = true; avatar.setImage(avatarUp) ;break;
@@ -118,6 +127,11 @@ public class CharacterMovement  {
             }
         });
 
+        /**
+         * handles what program does when key events are not occurring.
+         * @param event is a KeyEvent for the arrow keys and shift button.
+         */
+        
         scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -136,7 +150,15 @@ public class CharacterMovement  {
         window.setScene(scene);
         window.show();
 
+        /**
+         * Times animation 
+         * (movement)
+         */
         AnimationTimer timer = new AnimationTimer() {
+        	/**
+             * Here handle method handles the distance in pixels to move the avatar
+             * based on the booleans of whether the key events are happening.
+             */
             @Override
             public void handle(long now) {
                 int dx = 0, dy = 0;
