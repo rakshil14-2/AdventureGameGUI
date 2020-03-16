@@ -1,9 +1,10 @@
-package application;
+package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.Prop;
 
 public class PropController {
 	@FXML

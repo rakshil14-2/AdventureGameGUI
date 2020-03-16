@@ -1,12 +1,14 @@
-package application;
+package view;
 
 import java.io.IOException;
 
+import controller.PropController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.Prop;
 
 public class PropWindow {
 	public void display(String title,Prop p,String url) throws IOException{

@@ -7,11 +7,11 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameOverController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameOverController">
    <children>
       <ImageView fitHeight="607.0" fitWidth="777.0" layoutY="-117.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@GameOver.jpg" />
+            <Image url="@/photos/GameOver.jpg" />
          </image>
       </ImageView>
       <Button layoutX="14.0" layoutY="349.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="39.0" prefWidth="149.0" style="-fx-background-color: #110C12;" text="Back to Main Menu" textFill="RED" textOverrun="CENTER_ELLIPSIS">

@@ -1,6 +1,7 @@
-package application;
+package view;
 import java.io.IOException;
 
+import controller.PuzzleController;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -12,6 +13,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.Puzzle;
 
 /**
  * This class will create a new window that will pop up when the user clicks on any puzzle

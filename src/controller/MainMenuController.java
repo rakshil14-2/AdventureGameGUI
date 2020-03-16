@@ -1,4 +1,4 @@
-package application;
+package controller;
 
 /**
  * This is a class that handles the main menu button actions
@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import view.CharacterMovement;
 
 public class MainMenuController {
 	/**
@@ -42,7 +43,7 @@ public class MainMenuController {
 	 */
 	public void startClick(ActionEvent e) throws IOException {
 		// load the scene from the Level1.fxml file
-		Parent root = FXMLLoader.load(getClass().getResource("/Level1.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("/view/Level1.fxml"));
 		Scene gameover=new Scene(root,600,400);
 		// get the window that has the button in it and change the scene in it to level 1 scene
 		Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();

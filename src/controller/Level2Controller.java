@@ -1,4 +1,4 @@
-package application;
+package controller;
 
 /**
  * This class handles the event for the level 1 scene loaded from the Level1.fxml
@@ -19,6 +19,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Level;
+import model.Prop;
+import model.Puzzle;
+import view.PropWindow;
+import view.PuzzleWindow;
 
 public class Level2Controller implements Initializable{
 	@FXML ImageView door,medicalDoc,phone,comboLock,padLock;
@@ -53,7 +58,7 @@ public class Level2Controller implements Initializable{
 			PropWindow prop1 = new PropWindow();
 			prop = things.getProp(2);
 
-			prop1.display("Medical document", prop,"/medical.jpg");
+			prop1.display("Medical document", prop,"/photos/medical.jpg");
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}	
@@ -81,7 +86,7 @@ public class Level2Controller implements Initializable{
 			PropWindow prop1 = new PropWindow();
 			prop = things.getProp(1);
 
-			prop1.display("Voicmail", prop,"/Phone.png");
+			prop1.display("Voicmail", prop,"/photos/Phone.png");
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}	
@@ -96,7 +101,7 @@ public class Level2Controller implements Initializable{
 		if ( puzzle1Solved && puzzle2Solved )
 		{
 			// load the scene from the Level3.fxml file
-			Parent l3 = FXMLLoader.load(getClass().getResource("/Level3.fxml"));
+			Parent l3 = FXMLLoader.load(getClass().getResource("/view/Level3.fxml"));
 			Scene level3=new Scene(l3,600,400);
 			// get the window that has the button in it and change the scene in it to level 3 scene
 			Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();

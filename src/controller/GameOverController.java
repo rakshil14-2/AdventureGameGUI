@@ -1,4 +1,4 @@
-package application;
+package controller;
 
 import java.io.IOException;
 
@@ -23,7 +23,7 @@ public class GameOverController {
 	 */
 	public void buttonClick(ActionEvent e) throws IOException {
 		// load the scene from the MainMenu.fxml file
-		Parent root = FXMLLoader.load(getClass().getResource("/MainMenu.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
 		Scene gameover=new Scene(root,600,400);
 		// get the window that has the button in it and change the scene in it to main menu scene
 		Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();

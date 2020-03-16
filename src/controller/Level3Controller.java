@@ -1,4 +1,4 @@
-package application;
+package controller;
 
 /**
  * This class handles the event for the level 1 scene loaded from the Level1.fxml
@@ -19,6 +19,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Level;
+import model.Prop;
+import model.Puzzle;
+import view.PropWindow;
+import view.PuzzleWindow;
 
 public class Level3Controller implements Initializable {
 	@FXML ImageView diary,note,footnote,knife;
@@ -57,7 +62,7 @@ public class Level3Controller implements Initializable {
 			if(puzzle1Solved) {
 				PropWindow prop1 = new PropWindow();
 				prop = things.getProp(2);
-				prop1.display("What does it mean??", prop,"/will.jpg");
+				prop1.display("What does it mean??", prop,"/photos/will.jpg");
 				label.setText("");
 			}
 			else {
@@ -95,7 +100,7 @@ public class Level3Controller implements Initializable {
 			PropWindow prop1 = new PropWindow();
 			prop = things.getProp(1);
 
-			prop1.display("Diary notes", prop,"/Diary.jpg");
+			prop1.display("Diary notes", prop,"/photos/Diary.jpg");
 
 
 		} catch (IOException e1) {
@@ -113,7 +118,7 @@ public class Level3Controller implements Initializable {
 		if ( puzzle1Solved && puzzle2Solved )
 		{
 			// load the scene from the Won.fxml file
-			Parent root = FXMLLoader.load(getClass().getResource("/Won.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/view/Won.fxml"));
 			Scene gameover=new Scene(root,600,400);
 			// get the window that has the button in it and change the scene in it to wining scene
 			Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
