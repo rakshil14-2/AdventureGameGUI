@@ -30,7 +30,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
     	 // sets the stage title to advantur game then loads the scene from MainMenu.fxml
          primaryStage.setTitle("Adventure Game");
-         Parent root = FXMLLoader.load(getClass().getResource("/MainMenu.fxml"));
+         Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
          primaryStage.setScene(new Scene(root, 600, 400));
          primaryStage.show();    
 }}
