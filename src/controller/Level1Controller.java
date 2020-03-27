@@ -17,7 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Level;
 import model.Puzzle;
-import view.PuzzleWindow;
+import view.PopupWindow;
 
 
 /**
@@ -41,7 +41,7 @@ public class Level1Controller implements Initializable{
 	 */
 	public void lockClick() {
 
-		PuzzleWindow puzzle1Window = new PuzzleWindow();
+		PopupWindow puzzle1Window = new PopupWindow();
 		Puzzle puzzle_1 = things.getPuzzle(2);
 		try {
 			puzzle1Solved = puzzle1Window.display("Lock Puzzle", puzzle_1);
@@ -57,7 +57,7 @@ public class Level1Controller implements Initializable{
 	 */
 	public void noteClick() {
 		try {
-			PuzzleWindow puzzle1 = new PuzzleWindow();
+			PopupWindow puzzle1 = new PopupWindow();
 			lock = things.getPuzzle(3);
 			puzzle3Solved = puzzle1.display("Note Cipher", lock);
 		} catch (IOException e1) {
@@ -71,7 +71,7 @@ public class Level1Controller implements Initializable{
 	 * a new puzzle window will open and ther user can try to complete the puzzle
 	 */
 	public void invitationClick() {
-		PuzzleWindow puzzle2Window = new PuzzleWindow();
+		PopupWindow puzzle2Window = new PopupWindow();
 		Puzzle puzzle_2 = things.getPuzzle(1);
 		try {
 			puzzle2Solved = puzzle2Window.display("Invitaion Puzzle", puzzle_2);
