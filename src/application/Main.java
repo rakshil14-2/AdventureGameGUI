@@ -30,7 +30,11 @@ public class Main extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
+<<<<<<< Updated upstream
     	 // sets the stage title to adventure game, then loads the scene from MainMenu.fxml file
+=======
+    	 // sets the stage title to advanture game then loads the scene from MainMenu.fxml
+>>>>>>> Stashed changes
          primaryStage.setTitle("Adventure Game");
          Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
          primaryStage.setScene(new Scene(root, 600, 400));
