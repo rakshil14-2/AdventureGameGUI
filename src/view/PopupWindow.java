@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import controller.PropController;
 import controller.PuzzleController;
+import controller.StoryController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -77,6 +78,26 @@ public class PopupWindow {
 		window.showAndWait();
 
 	}
+	
+	
+	public void display(String title,String story) throws IOException {
+		Stage window = new Stage();
 
+		//Block events to other windows
+		window.initModality(Modality.APPLICATION_MODAL);
+		window.setTitle(title);
+		window.setMinWidth(250);
+
+		// load the scene from the Prop.fxml file
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("TextWindow.fxml"));
+		Parent root = loader.load();
+		StoryController controller = loader.<StoryController>getController();
+		controller.setStory(story);
+		
+		//Display window and wait for it to be closed
+		Scene scene = new Scene(root);
+		window.setScene(scene);
+		window.showAndWait();
+	}
 
 }
