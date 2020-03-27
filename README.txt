@@ -78,38 +78,78 @@ II-B. How To Compile:
 IV. Files Included With This Project:
 --------------------------------------
 
-CharacterMovement.java			ComboLock.png			.classpath	
-GameClock.java				Diary.jpg			.project
-GameOverController.java			Diary.png			build.fxbuild
-Level.java				Door.png
-Level1Controller.java			Footenote.png
-Level2Controller.java			GameOver.fxml
-Level3Controller.java			GameOver.jpg
-Main.java				Home.fxml
-MainMenuController.java			Invitation.png
-Prop.fxml				KeypadLock.png
-Prop.java				Knife.png
-PropController.java			Level1.fxml
-PropWindow.java				Level2.fxml
-Puzzle.fxml				Level3.fxml
-Puzzle.java				MainMenu.fxml
-PuzzleController.java			MedicalDoc.png
-PuzzleWindow.java			Note.png
-application.css				Paper.png
-					Phone.png
-					QuestionMark.jpg
-					SecurityCode.png
-					Solved.jpg
-					Telephone.png
-					Won.fxml
-					down.png
-					left.png
-					mansion.jpg
-					medical.jpg
-					right.png
-					safeLock.jpg
-					squibbles.png
-					will.jpg
+Files in this project are seperated into packages:
+
+	Package 1: application 
+		* Main.java
+		* application.css
+
+	Package 2: controller
+		* GameOverController.java
+		* Level1Controller.java
+		* Level2Controller.java
+		* Level3Controller.java
+		* MainMenuController.java
+		* PropController.java
+		* PuzzleController.java
+
+	Package 3: model
+
+		* GameClock.java
+		* Level.java
+		* Prop.java
+		* Puzzle.java
+
+	Package 4: photos
+
+		* ComboLock.png	
+		* Diary.jpg
+		* Diary.png
+		* Door.png
+		* Footenote.png
+		* GameOver.jpg
+		* Invitation.png
+		* KeypadLock.png
+		* Knife.png
+		* MedicalDoc.png
+		* Note.png
+		* Paper.png
+		* Phone.png
+		* QuestionMark.jpg
+		* SecurityCode.png
+		* Solved.jpg
+		* Telephone.png
+		* down.png
+		* left.png
+		* mansion.jpg
+		* medical.jpg
+		* right.png
+		* safeLock.jpg
+		* squibbles.png
+		* will.jpg
+
+	Package 5: view
+
+		* CharacterMovement.java
+		* GameOver.fxml
+		* Home.fxml
+		* Level1.fxml
+		* Level2.fxml
+		* Level3.fxml
+		* MainMenu.fxml
+		* Prop.fxml
+		* PropWindow.java
+		* Puzzle.fxml
+		* PuzzleWindow.java
+		* Won.fxml
+
+	Other files:
+
+		* .classpath
+		* .project
+		* build.fxbuild
+		* README.MD
+		* README.txt
 
 -------------
 V. Libraries:
