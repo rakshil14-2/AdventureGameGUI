@@ -108,6 +108,9 @@ public class Level2Controller implements Initializable{
 		
 		if ( puzzle1Solved && puzzle2Solved )
 		{
+			PopupWindow outro = new PopupWindow();
+			outro.display("Level 2 outro", things.getLevelExitText());
+			
 			// load the scene from the Level3.fxml file
 			Parent l3 = FXMLLoader.load(getClass().getResource("/view/Level3.fxml"));
 			Scene level3=new Scene(l3,600,400);
@@ -128,6 +131,12 @@ public class Level2Controller implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		things = new Level(2);
-
+		PopupWindow intro = new PopupWindow();
+		try {
+			intro.display("Level e Intro", things.getLevelIntroText());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
