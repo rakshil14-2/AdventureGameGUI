@@ -17,8 +17,7 @@ import javafx.stage.Stage;
 import model.Level;
 import model.Prop;
 import model.Puzzle;
-import view.PropWindow;
-import view.PuzzleWindow;
+import view.PopupWindow;
 
 
 /**
@@ -41,7 +40,7 @@ public class Level2Controller implements Initializable{
 	 */
 	public void padLockClick() {
 
-		PuzzleWindow puzzle1Window = new PuzzleWindow();
+		PopupWindow puzzle1Window = new PopupWindow();
 		Puzzle puzzle_1 = things.getPuzzle(1);
 		try {
 			puzzle1Solved = puzzle1Window.display("PadLock Puzzle", puzzle_1);
@@ -58,7 +57,7 @@ public class Level2Controller implements Initializable{
 	public void medicalDocClick() {
 		try {
 
-			PropWindow prop1 = new PropWindow();
+			PopupWindow prop1 = new PopupWindow();
 			prop = things.getProp(2);
 
 			prop1.display("Medical document", prop,"/photos/medical.jpg");
@@ -72,7 +71,7 @@ public class Level2Controller implements Initializable{
 	 * which gives ther user a new puzzle they must complete.
 	 */
 	public void comboLockClick() {
-		PuzzleWindow puzzle1Window = new PuzzleWindow();
+		PopupWindow puzzle1Window = new PopupWindow();
 		Puzzle puzzle_2 = things.getPuzzle(2);
 		try {
 			puzzle2Solved = puzzle1Window.display("Lock Puzzle", puzzle_2);
@@ -88,7 +87,7 @@ public class Level2Controller implements Initializable{
 	 */
 	public void phoneClick() {
 		try {
-			PropWindow prop1 = new PropWindow();
+			PopupWindow prop1 = new PopupWindow();
 			prop = things.getProp(1);
 
 			prop1.display("Voicmail", prop,"/photos/Phone.png");
