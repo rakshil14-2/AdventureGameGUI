@@ -1,5 +1,7 @@
 package application;
 
+//importing libraries
+
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -16,8 +18,8 @@ import javafx.scene.image.ImageView;
 
 /**
  * 
- * Main class for game
- * Launches main menu to start a new game
+ * Main class for Adventure Game GUI version
+ * Launches the main menu to start a new game
  *
  */
 public class Main extends Application {
@@ -28,7 +30,7 @@ public class Main extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-    	 // sets the stage title to advantur game then loads the scene from MainMenu.fxml
+    	 // sets the stage title to adventure game, then loads the scene from MainMenu.fxml file
          primaryStage.setTitle("Adventure Game");
          Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
          primaryStage.setScene(new Scene(root, 600, 400));
