@@ -108,9 +108,15 @@ public class Level1Controller implements Initializable{
 	 * as well as an introduction text.
 	 */
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL arg0, ResourceBundle arg1)  {
 		things = new Level(1);
-
+		PopupWindow intro = new PopupWindow();
+		try {
+			intro.display("Level 1 Intro", things.getLevelIntroText());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
 
