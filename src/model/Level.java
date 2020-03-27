@@ -3,11 +3,8 @@ import java.util.ArrayList;
 
 
 /**
- * 	Level class
- * 	
- * 	Currently contains the objects in the level
- * 	Plan to implement more for the next demo 
- * 
+ * The Level class contains all of the objects in the level.
+ * There are 3 levels in total.
  */
 public class Level {
 
@@ -21,14 +18,18 @@ public class Level {
 	private ArrayList<Puzzle> puzzles;
 
 	/**
+	 *
 	 * Level constructor
+	 * The Level contructor gets all the attributes for a level level and implements them.
+	 * The elements are different for each individual level but they all include different 
+	 * text, puzzles and props.
+	 *
 	 * @param lNum integer representing level number
+	 *
 	 */
 	public Level(int lNum) {
 		
 		levelNumber = lNum;
-		// iterates over String array to add story, level description text elements to level
-		// can be used for specific level children where they have level specific methods
 		levelIntroText = getLevelIntroText(lNum);
 		levelExitText = getLevelOutroText(lNum);
 		puzzles = getPuzzles(lNum);
@@ -37,14 +38,19 @@ public class Level {
 	
 	
 	/**
-	 * getLevelIntroText is a private method to generate the introduction text for the levels
-	 * @param lvlNum integer representing the level number
+	 * getLevelIntroText is a private getter method to generate the introduction text for the levels.
+	 * Each level has varying text for the begginning of the levels to give the user a stornger understanding of what 
+	 * is going on in the storyline. It may also contain useful information for solving puzzles.
+	 * The method uses a switch statement with cases to make sure each level gets their respective introduction text.
+	 *
+	 * @param lvlNum is an integer representing the level number
 	 * @return String containing the level's intro text
 	 * 
 	 */
 	private String getLevelIntroText(int lvlNum) {
 		String introTxt = "";
 		switch(lvlNum) {
+		//level 1 intro text
 		case 1:
 			introTxt = "Although you have solved many murder cases in the past, you have stumbled upon a rather tricky one.\r\n" + 
 					"			It's high-profile: the woman deceased was of great wealth, and a disturbing note was left at the crime \r\n" + 
@@ -54,13 +60,14 @@ public class Level {
 					"			and notorety. Who killed Scarlett?\\n\\n\r\n" + 
 					"			You must leave no stone unturned as you try to solve this crime and figure out what really happened to Scarlett.";
 			break;
-
+		//level 2 intro text
 		case 2:
 			introTxt = "We know that Huey, Dewey and Louie are suspects. But now we have added Chris to the roster, and Huey\r\n" + 
 					"and Dewey and Louie could have either known or not known that she was giving him her fortune... things\r\n" + 
 					"are getting messy. Now that you have a sneaking suspicion that Chris may be responsible, you need to\r\n" + 
 					"search for any clues that pertain to him.";
 			break;
+		//level 3 intro text
 		case 3:
 			introTxt = "You enter the last room and you see where Scarlett's body was found outlined in tape on the floor. \r\n" + 
 					"You have 2 suspects left. Narrow it down to the murderer to escape.";
@@ -71,21 +78,32 @@ public class Level {
 	}
 	
 	
-	
+	/**
+	 * getLevelOutroText is a private getter method to generate the outro text for the levels.
+	 * Each level has varying text for the completion of the levels to give the user a stornger understanding of what 
+	 * is going on in the storyline. It may also contain useful information for solving puzzles.
+	 * The method uses a switch statement with cases to make sure each level gets their respective outro text.
+	 * 
+	 * @param lvlNum is an integer representing the level number
+	 * @return String containing the level's outro text
+	 * 
+	 */
 	private String getLevelOutroText(int lvlNum) {
 		String outroTxt = "";
 		switch(lvlNum) {
+		//level 1 outro 
 		case 1:
 			outroTxt = "We know that Huey, Dewey and Louie are suspects. But now we have added Chris Evans to the roster, and Huey and Dewey\r\n" + 
 					"and Louie could have either known or not known that she was giving him her fortune. Things are getting messy. \r\n" + 
 					"\r\n" + 
 					"Now that you have a sneaking suspicion that Chris may be responsible, you need to search for any clues that pertain to him.";
 			break;
-
+		//level 2 outro
 		case 2:
 			outroTxt = "Congratulations you have escaped from the second room but are many more rooms to escape \r\n" + 
 					"to solve the mystery!";
 			break;
+		//level 3 outro
 		case 3:
 			outroTxt = "The case is solved and you managed to uncover the murderer in an impressive amount of time. This\r\n" + 
 					"should prevent any misconstrued headlines in the newspaper and now you have the evidence to prove\r\n" + 
@@ -98,13 +116,20 @@ public class Level {
 	
 	
 	/**
-	 * 	getPuzzles method returns arraylist of puzzles for each level
-	 * 	@param lvlNum integer represeting level number
-	 *  @return ArrayList of Puzzles for level
+	 * The getPuzzles method returns arraylist of puzzles for each level.
+	 * Depending on the level there are different puzzles that are implemented and that the user must solve
+	 * in order to win the game. 
+	 * The method uses a switch statement with cases, and in each case there is an array list of the puzzles
+	 * for their respective levels. It takes the level number as an input to make sure it returns the correct
+	 * array list of puzzles for that given level.
+	 *
+	 * @param lvlNum is an integer represeting the level number.
+	 * @return ArrayList of Puzzles for level
 	 */
 	private ArrayList<Puzzle> getPuzzles(int lvlNum){
 		ArrayList<Puzzle> puzList = new ArrayList<Puzzle>();
 		switch(lvlNum) {
+		//level 1 puzzles
 		case 1:
 			Puzzle puzzle1_1 = new Puzzle(0, 0, "Scarlett has 3 children with her husband Brad Pitt, who passed \r\n" + 
 					"away only a year ago in a horrible plane accident.He was on a business trip and extreme weather \r\n" + 
@@ -124,7 +149,7 @@ public class Level {
 					"New Years Eve");
 			Puzzle puzzle1_2 = new Puzzle(0,0,"You kept looking through the desk and found a drawer with a safe in it. Shoot! \r\n" + 
 					"It's locked. If only the code was written somewhere. a ha! It is.  \r\n"+
-					"Maybe? This is a 4 number code but you see a note with 8 numbers on it…. Maybe this is some kind \r\n" + 
+					"Maybe? This is a 4 number code but you see a note with 8 numbers on itâ€¦. Maybe this is some kind \r\n" + 
 					"of a key. \r\n" + 
 					"\r\n" + 
 					"2  1  3  2  7  1  4  2 ", 
@@ -142,7 +167,7 @@ public class Level {
 			puzList.add(puzzle1_2);
 			puzList.add(puzzle1_3);
 			break;
-
+		//level 2 puzzles
 		case 2:
 			Puzzle puzzle2_1 = new Puzzle(0,0, "You find a file cabinet that is locked with a pass code. On it is inscribed:\r\n" + 
 					"If Two's Company, and Three's a Crowd What are Four AND Five?\r\n" + 
@@ -158,6 +183,7 @@ public class Level {
 			puzList.add(puzzle2_1);
 			puzList.add(puzzle2_2);
 			break;
+		//level 3 puzzles
 		case 3:
 			Puzzle puzzle3_1 = new Puzzle(0,0, "The last thing you see is a hand written note that pokes out of the bookshelf near\n"
 					+ "where you found the diary.\r\n" + 
@@ -178,13 +204,21 @@ public class Level {
 	
 	
 	/**
-	 * 	getProps method is a helper method to generate the levels props
-	 * 	@param lvlNum integer representing level number
-	 * 	@return ArrayList of Props for the level
+	 * The getProps method returns an array list of props for each level.
+	 * Depending on the level there are different props that are implemented and that the user must click
+	 * on and read about in order to advance in the game. 
+	 * The method uses a switch statement with cases, and in each case there is an array list of the props
+	 * for their respective levels. It takes the level number as an input to make sure it returns the correct
+	 * array list of props for that given level. 
+	 * Level 1 does not contain any props and as such, there are only cases for the second and third levels.
+	 *
+	 * @param lvlNum is an integer represeting the level number.
+	 * @return ArrayList of Props for level.
 	 */
 	private ArrayList<Prop> getProps(int lvlNum){
 		ArrayList<Prop> propList = new ArrayList<Prop>();
 		switch(lvlNum) {
+		//level 2 props
 		case 2:
 			Prop prop2_1 = new Prop("You pick up the phone and give the voicemails a listen.\r\n" + 
 					"'This is the hospital calling. It's 10:00pm. Hewey has been in a serious car accident on the main highway, \r\n" + 
@@ -197,7 +231,7 @@ public class Level {
 					"days! This completely eliminates Dewey as a suspect.", 0,0);
 			propList.add(prop2_2);
 			break;
-
+		//level 3 props
 		case 3:
 			Prop prop3_1 = new Prop("You begin sifting through the bookshelf for any traces of evidence when you pull out Scarlett's diary.\r\n" + 
 					"In her most recent entry before her passing, she wrote:\r\n" + 
@@ -229,9 +263,9 @@ public class Level {
 	}
 	
 	/**
-	 * 	getPuzzle method generates the levels puzzles
-	 * 	@param puzzleNum integer representing the puzzle in the array
-	 * 	@return Puzzle object
+	 * The getPuzzle method generates the levels' puzzles.
+	 * @param puzzleNum integer representing the puzzle in the array
+	 * @return Puzzle object
 	 */
 	public Puzzle getPuzzle(int puzzleNum) {
 		Puzzle tPuzzle;
@@ -240,9 +274,9 @@ public class Level {
 	}
 	
 	/**
-	 *  getProp method generates the levels props
-	 *  @param propNum integer representing the prop in the array
-	 *  @return Prop object
+	 *  The getProp method generates the levels props.
+	 *  @param propNum is an integer representing the prop in the array.
+	 *  @return Prop object.
 	 */	
 	public Prop getProp(int propNum) {
 		Prop tProp;
