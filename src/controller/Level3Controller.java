@@ -17,8 +17,8 @@ import javafx.stage.Stage;
 import model.Level;
 import model.Prop;
 import model.Puzzle;
-import view.PropWindow;
-import view.PuzzleWindow;
+import view.PopupWindow;
+
 
 /**
  * The Level3Controller class handles the event for the level 3 scene loaded from Level3.fxml
@@ -43,7 +43,7 @@ public class Level3Controller implements Initializable {
 	 */
 	public void knifeClick() {
 
-		PuzzleWindow puzzle1Window = new PuzzleWindow();
+		PopupWindow puzzle1Window = new PopupWindow();
 		Puzzle puzzle_2 = things.getPuzzle(2);
 		try {
 			if(puzzle1Solved) {
@@ -62,7 +62,7 @@ public class Level3Controller implements Initializable {
 	public void footnoteClick() {
 		try {
 			if(puzzle1Solved) {
-				PropWindow prop1 = new PropWindow();
+				PopupWindow prop1 = new PopupWindow();
 				prop = things.getProp(2);
 				prop1.display("What does it mean??", prop,"/photos/will.jpg");
 				label.setText("");
@@ -83,7 +83,7 @@ public class Level3Controller implements Initializable {
 	 * This puzzle has to be solved before others in this level.
 	 */
 	public void noteClick() {
-		PuzzleWindow puzzle1Window = new PuzzleWindow();
+		PopupWindow puzzle1Window = new PopupWindow();
 		Puzzle puzzle_1 = things.getPuzzle(1);
 		try {
 			puzzle1Solved = puzzle1Window.display("Small Notes", puzzle_1);
@@ -100,7 +100,7 @@ public class Level3Controller implements Initializable {
 	public void diaryClick() {
 		try {
 
-			PropWindow prop1 = new PropWindow();
+			PopupWindow prop1 = new PopupWindow();
 			prop = things.getProp(1);
 
 			prop1.display("Diary notes", prop,"/photos/Diary.jpg");
