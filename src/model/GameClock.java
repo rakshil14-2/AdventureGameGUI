@@ -1,35 +1,33 @@
 package model;
 
+//importing Calendar library
 import java.util.Calendar;
+
+/**
+ *
+ * GameClock is a class that keeps track of game time.
+ * Methods return minutes and seconds remaining for
+ * continue feature, returns a string of the remaining time
+ * for the games map view, and is checked for for game over if the
+ * player goes over the 20 minute time limit (for current build). 
+ * 
+*/
 
 public class GameClock {
 	
-	/**
-	 * 	GameClock
-	 * 	class that keeps track of game time.
-	 *  Methods return minutes and seconds remaining for
-	 *  continue feature, returns a string of the remaining time
-	 *  for the games map view, and is checked for for game over if the
-	 *  player goes over the 20 minute time limit (for current build). 
-	 * 
-	 */
-	
-	
-	/**
-	 *  total end time in seconds */
+	//total end time in seconds
 	private  int endTimeInSeconds;
 	
-	/**
-	 *  game timer constants
-	 */
+	//game timer constants
 	private  final int TIMELIMIT = 20;
 	private  final int HOURCONV = 3600, MINCONV = 60;
 
-	
 	/**
-	 * method that checks if the player has gone over the game's time limit
+	 * The isGameOver method checks if the player has exceded the time limit that has been put on the game.
+	 * This is so that we can end the game when the user takes too long to complete it.
 	 * 
-	 * @return boolean true if game is over */
+	 * @return boolean true if game is over 
+	 */
 	public  boolean isGameOver() {
 		 int currentTimeInSeconds = getTimeInSeconds();
 		 boolean gameOver = true;
@@ -40,7 +38,8 @@ public class GameClock {
 	
 
 	/** 
-	 * getTimer returns a string time in "00:00" format for the game's map view
+	 * The getTimer method is a getter which gets our "timer".
+	 * It returns a string time in "00:00" format for the game's map view.
 	 * 
 	 * @return String of time remaining 
 	 */
@@ -57,8 +56,8 @@ public class GameClock {
 	}
 	
 	/**
-	 * getMinutesRemaining returns minutes remaining for saving game and works as helper 
-	 * method for getTimer().
+	 * The getMinutesRemaining method is a getter method which returns minutes remaining for saving the game
+	 * and works as helper method for getTimer().
 	 * 
 	 * @return integer of minutes remaining
 	 */
@@ -74,7 +73,8 @@ public class GameClock {
 	 * getSecondsRemaining returns seconds remaining for saving game and works as a helper
 	 * method for getTimer().
 	 * 
-	 * @return integer of remaining seconds */
+	 * @return integer of remaining seconds
+	 */
 	public  int getSecondsRemaining()	{
 		int currentTimeInSeconds = getTimeInSeconds();
 		int timeRemaining = endTimeInSeconds - currentTimeInSeconds;
@@ -84,7 +84,8 @@ public class GameClock {
 	}
 	
 	/** 
-	 * getHoursRemaining method returns hours remaining if needed in the future 
+	 * getHoursRemaining is a method which returns the hours remaining 
+	 * for the user to complete the game if it is needed in the future.
 	 * 
 	 * @return hours remaining
 	 */
@@ -100,7 +101,8 @@ public class GameClock {
 	 * getTimeInSeconds is a private helper method to get time in seconds for calculations
 	 * in other methods.
 	 * 
-	 * @return integer of all time remaining in seconds */
+	 * @return integer of all time remaining in seconds 
+	 */
 	private  int getTimeInSeconds() {
 		Calendar currentTime = Calendar.getInstance();
 		int currentHour = currentTime.get(Calendar.HOUR_OF_DAY);
@@ -111,7 +113,8 @@ public class GameClock {
 	}
 	
 	/** 
-	 * setTimeReamining is a public method to set time remaining when loading from save game
+	 * setTimeReamining is a public method
+	 * it is a setter to set the time remaining when loading from saved game.
 	 * 
 	 * @param minutes integer that represents minutes remaining from save file
 	 * @param seconds integer that represents seconds remaining from save file
@@ -121,7 +124,8 @@ public class GameClock {
 	}
 	
 	/**
-	 * resetTime is a public method that resets the game clock when starting a new game
+	 * resetTime is a public method that resets the game clock to zero when starting a new game.
+	 * It calculates the end time in seconds using the current time and the time limit.
 	 */
 	public void resetTime() {
 		int currentTimeInSeconds = getTimeInSeconds();
