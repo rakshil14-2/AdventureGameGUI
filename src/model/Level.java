@@ -30,8 +30,8 @@ public class Level {
 	public Level(int lNum) {
 		
 		levelNumber = lNum;
-		levelIntroText = getLevelIntroText(lNum);
-		levelExitText = getLevelOutroText(lNum);
+		setLevelIntroText(getLevelIntroText(lNum));
+		setLevelExitText(getLevelOutroText(lNum));
 		puzzles = getPuzzles(lNum);
 		props = getProps(lNum);
 	}
@@ -53,24 +53,24 @@ public class Level {
 		//level 1 intro text
 		case 1:
 			introTxt = "Although you have solved many murder cases in the past, you have stumbled upon a rather tricky one.\r\n" + 
-					"			It's high-profile: the woman deceased was of great wealth, and a disturbing note was left at the crime \r\n" + 
-					"			scene. It may appear to be a suicide at first glance, but it is far too suspicious. Scarlett Johansson \r\n" + 
-					"			was envied for her wealth and fame, and she had inherited a rather fortunate business from her father \r\n" + 
-					"			before he passed. Her three children, and many others, all seemed too eager for a piece of her fortune \r\n" + 
-					"			and notorety. Who killed Scarlett?\\n\\n\r\n" + 
-					"			You must leave no stone unturned as you try to solve this crime and figure out what really happened to Scarlett.";
+					"It's high-profile: the woman deceased was of great wealth, and a disturbing note was left at the crime \r\n" + 
+					"scene. It may appear to be a suicide at first glance, but it is far too suspicious. Scarlett Johansson \r\n" + 
+					"was envied for her wealth and fame, and she had inherited a rather fortunate business from her father \r\n" + 
+					"before he passed. Her three children, and many others, all seemed too eager for a piece of her fortune \r\n" + 
+					"and notorety. Who killed Scarlett?\r\n" + 
+					"You must leave no stone unturned as you try to solve this crime and figure out what really happened to Scarlett.";
 			break;
 		//level 2 intro text
 		case 2:
 			introTxt = "We know that Huey, Dewey and Louie are suspects. But now we have added Chris to the roster, and Huey\r\n" + 
-					"and Dewey and Louie could have either known or not known that she was giving him her fortune... things\r\n" + 
-					"are getting messy. Now that you have a sneaking suspicion that Chris may be responsible, you need to\r\n" + 
-					"search for any clues that pertain to him.";
+					   "and Dewey and Louie could have either known or not known that she was giving him her fortune... things\r\n" + 
+					   "are getting messy. Now that you have a sneaking suspicion that Chris may be responsible, you need to\r\n" + 
+					   "search for any clues that pertain to him.";
 			break;
 		//level 3 intro text
 		case 3:
 			introTxt = "You enter the last room and you see where Scarlett's body was found outlined in tape on the floor. \r\n" + 
-					"You have 2 suspects left. Narrow it down to the murderer to escape.";
+					   "You have 2 suspects left. Narrow it down to the murderer to escape.";
 			break;
 		}
 		
@@ -94,21 +94,21 @@ public class Level {
 		//level 1 outro 
 		case 1:
 			outroTxt = "We know that Huey, Dewey and Louie are suspects. But now we have added Chris Evans to the roster, and Huey and Dewey\r\n" + 
-					"and Louie could have either known or not known that she was giving him her fortune. Things are getting messy. \r\n" + 
-					"\r\n" + 
-					"Now that you have a sneaking suspicion that Chris may be responsible, you need to search for any clues that pertain to him.";
+					   "and Louie could have either known or not known that she was giving him her fortune. Things are getting messy. \r\n" + 
+					   "\r\n" + 
+					   "Now that you have a sneaking suspicion that Chris may be responsible, you need to search for any clues that pertain to him.";
 			break;
 		//level 2 outro
 		case 2:
 			outroTxt = "Congratulations you have escaped from the second room but are many more rooms to escape \r\n" + 
-					"to solve the mystery!";
+					   "to solve the mystery!";
 			break;
 		//level 3 outro
 		case 3:
 			outroTxt = "The case is solved and you managed to uncover the murderer in an impressive amount of time. This\r\n" + 
-					"should prevent any misconstrued headlines in the newspaper and now you have the evidence to prove\r\n" + 
-					"Louie is guilty when he is put on trail for the murder of his own mother, Scarlett Johansson. \r\n" + 
-					"Congratulations!";
+					   "should prevent any misconstrued headlines in the newspaper and now you have the evidence to prove\r\n" + 
+					   "Louie is guilty when he is put on trail for the murder of his own mother, Scarlett Johansson. \r\n" + 
+					   "Congratulations!";
 			break;
 		}		
 		return outroTxt;		
@@ -282,6 +282,26 @@ public class Level {
 		Prop tProp;
 		tProp = new Prop(props.get(propNum -1));
 		return tProp;
+	}
+
+
+	public String getLevelIntroText() {
+		return levelIntroText;
+	}
+
+
+	public void setLevelIntroText(String levelIntroText) {
+		this.levelIntroText = levelIntroText;
+	}
+
+
+	public String getLevelExitText() {
+		return levelExitText;
+	}
+
+
+	public void setLevelExitText(String levelExitText) {
+		this.levelExitText = levelExitText;
 	}
 	
 }
