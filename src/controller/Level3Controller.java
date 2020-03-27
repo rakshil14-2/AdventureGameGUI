@@ -122,6 +122,8 @@ public class Level3Controller implements Initializable {
 	public void doorClick(MouseEvent e) throws IOException {
 		if ( puzzle1Solved && puzzle2Solved )
 		{
+			PopupWindow outro = new PopupWindow();
+			outro.display("Level 3 outro", things.getLevelExitText());
 			// load the scene from the Won.fxml file
 			Parent root = FXMLLoader.load(getClass().getResource("/view/Won.fxml"));
 			Scene gameover=new Scene(root,600,400);
@@ -143,6 +145,12 @@ public class Level3Controller implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		things = new Level(3);
-
+		PopupWindow intro = new PopupWindow();
+		try {
+			intro.display("Level 3 Intro", things.getLevelIntroText());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
