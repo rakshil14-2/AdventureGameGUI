@@ -49,7 +49,7 @@ public class CharacterMovement  {
     private final String AVATAR_RIGHT =
             "/photos/right.png";
     private final String AVATAR_DOWN =
-            "photos/down.png";
+            "/photos/down.png";
     
     /**
      * Images for each direction
