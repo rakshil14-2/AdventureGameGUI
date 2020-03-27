@@ -43,13 +43,13 @@ public class CharacterMovement  {
 	 */
 	
     private final String AVATAR_UP =
-            "squibbles.png";
+            "/photos/squibbles.png";
     private final String AVATAR_LEFT =
-            "left.png";
+            "/photos/left.png";
     private final String AVATAR_RIGHT =
-            "right.png";
+            "/photos/right.png";
     private final String AVATAR_DOWN =
-            "down.png";
+            "photos/down.png";
     
     /**
      * Images for each direction
