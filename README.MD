@@ -68,67 +68,67 @@ You can now compile and run JavaFX applications from the command line using the 
 # IV. Files Included With This Project:
 --------------------------------------
 Files in this project are seperated into packages:
-Package 1: application 
-* Main.java
-* application.css
-Package 2: controller
-* GameOverController.java
-* Level1Controller.java
-* Level2Controller.java
-* Level3Controller.java
-* MainMenuController.java
-* PropController.java
-* PuzzleController.java
-Package 3: model
-* GameClock.java
-* Level.java
-* Prop.java
-* Puzzle.java
-Package 4: photos
-* ComboLock.png	
-* Diary.jpg
-* Diary.png
-* Door.png
-* Footenote.png
-* GameOver.jpg
-* Invitation.png
-* KeypadLock.png
-* Knife.png
-* MedicalDoc.png
-* Note.png
-* Paper.png
-* Phone.png
-* QuestionMark.jpg
-* SecurityCode.png
-* Solved.jpg
-* Telephone.png
-* down.png
-* left.png
-* mansion.jpg
-* medical.jpg
-* right.png
-* safeLock.jpg
-* squibbles.png
-* will.jpg
-Package 5: view
-* CharacterMovement.java
-* GameOver.fxml
-* Home.fxml
-* Level1.fxml
-* Level2.fxml
-* Level3.fxml
-* MainMenu.fxml
-* Prop.fxml
-* PropWindow.java
-* Puzzle.fxml
-* PuzzleWindow.java
-* Won.fxml
-Other files:
-* .classpath
-* .project
-* build.fxbuild
-* README.MD
-* README.txt
+* Package 1: application 
+	* Main.java
+	* application.css
+* Package 2: controller
+	* GameOverController.java
+	* Level1Controller.java
+	* Level2Controller.java
+	* Level3Controller.java
+	* MainMenuController.java
+	* PropController.java
+	* PuzzleController.java
+* Package 3: model
+	* GameClock.java
+	* Level.java
+	* Prop.java
+	* Puzzle.java
+* Package 4: photos
+	* ComboLock.png	
+	* Diary.jpg
+	* Diary.png
+	* Door.png
+	* Footenote.png
+	* GameOver.jpg
+	* Invitation.png
+	* KeypadLock.png
+	* Knife.png
+	* MedicalDoc.png
+	* Note.png
+	* Paper.png
+	* Phone.png
+	* QuestionMark.jpg
+	* SecurityCode.png
+	* Solved.jpg
+	* Telephone.png
+	* down.png
+	* left.png
+	* mansion.jpg
+	* medical.jpg
+	* right.png
+	* safeLock.jpg
+	* squibbles.png
+	* will.jpg
+* Package 5: view
+	* CharacterMovement.java
+	* GameOver.fxml
+	* Home.fxml
+	* Level1.fxml
+	* Level2.fxml
+	* Level3.fxml
+	* MainMenu.fxml
+	* Prop.fxml
+	* PropWindow.java
+	* Puzzle.fxml
+	* PuzzleWindow.java
+	* Won.fxml
+* Other files:
+	* .classpath
+	* .project
+	* build.fxbuild
+	* README.MD
+	* README.txt
 
 -------------
 # V. Libraries:
