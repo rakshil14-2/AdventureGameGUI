@@ -1,14 +1,9 @@
 package controller;
 
-/**
- * This class handles the event for the level 1 scene loaded from the Level1.fxml
- * @author Delara
- * 
- */
+//importing libraries.
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -25,6 +20,11 @@ import model.Puzzle;
 import view.PropWindow;
 import view.PuzzleWindow;
 
+/**
+ * The Level3Controller class handles the event for the level 3 scene loaded from Level3.fxml
+ * @author Delara
+ */
+
 public class Level3Controller implements Initializable {
 	@FXML ImageView diary,note,footnote,knife;
 	@FXML 
@@ -35,9 +35,11 @@ public class Level3Controller implements Initializable {
 	Level things;
 
 	/**
-	 * 
-	 * This method handles the event on the knife image in the level 3 scene
-	 * It opens a puzzle window if it is clicked but it will not open the window if the other puzzle has not been solved first
+	 * The knifeClick method handles the mouse click event on the knife image in the level 3 scene
+	 * It opens a puzzle window if the image of the knife is clicked,
+	 * but it will not open the window if the other puzzle in the level has not been solved prior.
+	 * This is the final puzzle so it requires the user to have the information from all the other 
+	 * game puzzles and props before it will be possible to solve.
 	 */
 	public void knifeClick() {
 
@@ -48,14 +50,14 @@ public class Level3Controller implements Initializable {
 				puzzle2Solved = puzzle1Window.display("Who Is the Killer?", puzzle_2);
 			}
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}	
 	}
 	/**
 	 * 
-	 * This method handles the event on the footnote image in the level 3 scene
-	 * It opens a prop window if it is clicked and puzzle 1 is solved
+	 * The footnoteClick method handles the mouse click event on the footnote image in the level 3 scene.
+	 * It opens a prop window if the image of the footnote is clicked and the first puzzle is already solved.
+	 * Then the user can read important story information in the prop window to help them advance in the game.
 	 */
 	public void footnoteClick() {
 		try {
@@ -70,14 +72,15 @@ public class Level3Controller implements Initializable {
 			}
 
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}	
 	}
 	/**
 	 * 
-	 * This method handles the event on the note image in the level 3 scene
-	 * It opens a puzzle window if it is clicked
+	 * The noteClick method handles the mouse click event on the note image in the level 3 scene.
+	 * It opens a puzzle window if the image of the note is clicked and then the user is prompted
+	 * to solve the puzzle in the puzzle window. 
+	 * This puzzle has to be solved before others in this level.
 	 */
 	public void noteClick() {
 		PuzzleWindow puzzle1Window = new PuzzleWindow();
@@ -85,14 +88,14 @@ public class Level3Controller implements Initializable {
 		try {
 			puzzle1Solved = puzzle1Window.display("Small Notes", puzzle_1);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}		
 	}
 	/**
 	 * 
-	 * This method handles the event on the diary image in the level 3 scene
-	 * It opens a prop window if it is clicked
+	 * The diaryClick method handles the mouse click event on the diary image in the level 3 scene.
+	 * It opens a prop window if the image of the diary is clicked, and then the user can read 
+	 * important story information in the prop window to help them advance in the game.
 	 */
 	public void diaryClick() {
 		try {
@@ -109,9 +112,11 @@ public class Level3Controller implements Initializable {
 		}	
 	}
 	/**
-	 * This method handles the event on the door image in level 1 scene
-	 * If this is clicked it will check to see if all the puzzles are solved to change the scene to wining scene
-	 * @param e a MouseEvent used to change the current scene to the wining scene
+	 * The doorClick method handles the mouse click event on the door image in this level 3 scene.
+	 * If the image of the door is clicked, it will check to see if all the puzzles are solved 
+	 * to change the scene to the winning scene. If not all puzzles have been solved prior to the door 
+	 * being clicked it will tell the user the door is locked. 
+	 * @param e is a MouseEvent used to change the current scene to the wining scene
 	 * @throws IOException exceptions for loading the Level2.fxml file
 	 */
 	public void doorClick(MouseEvent e) throws IOException {
@@ -132,7 +137,8 @@ public class Level3Controller implements Initializable {
 
 	}
 	/**
-	 * This method will generate level 3 props and puzzles as well as intro text
+	 * The initialize method will generate level 3 props and puzzles
+	 * as well as introduction text.
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
