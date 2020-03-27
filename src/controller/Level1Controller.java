@@ -1,14 +1,9 @@
 package controller;
 
-/**
- * This class handles the event for the level 1 scene loaded from the Level1.fxml
- * @author Delara
- * 
- */
+//importing libraries
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +19,12 @@ import model.Level;
 import model.Puzzle;
 import view.PuzzleWindow;
 
+
+/**
+ * The Level1Controller class handles the event for the level 1 scene loaded from the Level1.fxml
+ * @author Delara
+ * 
+ */
 public class Level1Controller implements Initializable{
 	@FXML ImageView notePuzzle,lockPuzzle,invitaionPuzzle,door;
 	@FXML Label lockDoor;
@@ -34,7 +35,9 @@ public class Level1Controller implements Initializable{
 	/**
 	 * 
 	 * This method handles the event on the lock image in the level 1 scene
-	 * It opens a puzzle window if it is clicked
+	 * When the image of the lock is clicked by the mouse a puzzle window will open
+	 * then the user can try to solve the puzzle in the new window
+	 *
 	 */
 	public void lockClick() {
 
@@ -48,8 +51,9 @@ public class Level1Controller implements Initializable{
 	}
 
 	/**
-	 * This method handles the event on the note image in the level 3 scene
-	 * It opens a puzzle window if it is clicked
+	 * The noteClick handles the event on the note image in the level 3 scene
+	 * When the mouse clicks on the image of the note it will open a new puzzle window
+	 * and then the user can try to complete the puzzle
 	 */
 	public void noteClick() {
 		try {
@@ -62,8 +66,9 @@ public class Level1Controller implements Initializable{
 	}
 
 	/**
-	 * This method handles the event on the invitation image in the level 1 scene
-	 * It opens a puzzle window if it is clicked
+	 * The invitationClick method handles the event on the invitation image in the level 1 scene
+	 * When the mouse is used to click on the image of the invitation 
+	 * a new puzzle window will open and ther user can try to complete the puzzle
 	 */
 	public void invitationClick() {
 		PuzzleWindow puzzle2Window = new PuzzleWindow();
@@ -76,9 +81,10 @@ public class Level1Controller implements Initializable{
 	}
 
 	/**
-	 * This method handles the event on the door image in level 1 scene
-	 * If this is clicked it will check to see if all the puzzles are solved to change the scene to level 2
-	 * @param e a MouseEvent used to change the current scene to the level 2 scene
+	 * The doorClick method handles the event on the door image in level 1 scene
+	 * If the door image is clicked by the mouse it will check to see if all the puzzles
+	 * are solved, and if all puzzles are solved it will allow the user to continue to the second level.
+	 * @param e is a MouseEvent used to change the current scene to the level 2 scene
 	 * @throws IOException exceptions for loading the Level2.fxml file
 	 */
 	public void doorClick(MouseEvent e) throws IOException {
@@ -98,7 +104,8 @@ public class Level1Controller implements Initializable{
 
 	}
 	/**
-	 * This method will generate level 1 props and puzzles as well as intro text
+	 * The initialize method will generate level 1 props and puzzles,
+	 * as well as an introduction text.
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
