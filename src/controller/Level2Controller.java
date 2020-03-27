@@ -1,14 +1,9 @@
 package controller;
 
-/**
- * This class handles the event for the level 1 scene loaded from the Level1.fxml
- * @author Delara
- * 
- */
+//importing libraries
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -25,6 +20,13 @@ import model.Puzzle;
 import view.PropWindow;
 import view.PuzzleWindow;
 
+
+/**
+ * The Level2Controller class handles the event for the level 1 scene loaded from Level1.fxml
+ * @author Delara
+ * 
+ */
+
 public class Level2Controller implements Initializable{
 	@FXML ImageView door,medicalDoc,phone,comboLock,padLock;
 	@FXML Label lockDoor;
@@ -33,9 +35,9 @@ public class Level2Controller implements Initializable{
 	Level things;
 
 	/**
-	 * 
-	 * This method handles the event on the pad lock image in the level 2 scene
-	 * It opens a puzzle window if it is clicked
+	 * The padLockCLick method handles the event on the pad lock image in the level 2 scene
+	 * If the user mouse clicks the image of the pad lock it opens a new puzzle window
+	 * in which a new puzzle will appear for the user to complete.
 	 */
 	public void padLockClick() {
 
@@ -48,9 +50,10 @@ public class Level2Controller implements Initializable{
 		}	
 	}
 	/**
-	 * 
-	 * This method handles the event on the medical document image in the level 2 scene
-	 * It opens a prop window if it is clicked
+	 * The medicalDocClick method handles the event on the medical document image in the level 2 scene
+	 * If the image of the medical doument is mouse clicked it opens a new prop window
+	 * which contains information for the user to read about the story to help them solve future puzzles,
+	 * and advance in the game.
 	 */
 	public void medicalDocClick() {
 		try {
@@ -64,8 +67,9 @@ public class Level2Controller implements Initializable{
 		}	
 	}
 	/**
-	 * This method handles the event on the combination lock image in the level 2 scene
-	 * It opens a puzzle window if it is clicked
+	 * The comboLockClick method handles the event on the combination lock image in the level 2 scene
+	 * It opens a puzzle window if the image of the combination clock is mouse clicked,
+	 * which gives ther user a new puzzle they must complete.
 	 */
 	public void comboLockClick() {
 		PuzzleWindow puzzle1Window = new PuzzleWindow();
@@ -77,9 +81,10 @@ public class Level2Controller implements Initializable{
 		}		
 	}
 	/**
-	 * 
-	 * This method handles the event on the phone image in the level 2 scene
-	 * It opens a prop window if it is clicked
+	 * The phoneClick method handles the event on the phone image in the level 2 scene
+	 * It opens a prop window if the image of the phone is mouse clicked
+	 * which contains information for the user to read about the story to help them solve future puzzles,
+	 * and advance in the game.
 	 */
 	public void phoneClick() {
 		try {
@@ -92,12 +97,16 @@ public class Level2Controller implements Initializable{
 		}	
 	}
 	/**
-	 * This method handles the event on the door image in level 1 scene
-	 * If this is clicked it will check to see if all the puzzles are solved to change the scene to level 3
+	 * The doorClick method handles the event on the door image in level 1 scene
+	 * If the image of the door is mouse clicked it will check to see if all the puzzles are solved
+	 * and if they are it allows the user to then continue to the third level.
+	 * Otherwise, it tells the user the door is still locked.
 	 * @param e a MouseEvent used to change the current scene to the level 3 scene
 	 * @throws IOException exceptions for loading the Level2.fxml file
 	 */
 	public void doorClick(MouseEvent e) throws IOException {
+		//if-else statements are used to check for puzzles being solved
+		
 		if ( puzzle1Solved && puzzle2Solved )
 		{
 			// load the scene from the Level3.fxml file
@@ -114,7 +123,8 @@ public class Level2Controller implements Initializable{
 
 	}
 	/**
-	 * This method will generate level 2 props and puzzles as well as intro text
+	 * The initialize  method will generate level 2 props and puzzles 
+	 * as well as introduction text.
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
