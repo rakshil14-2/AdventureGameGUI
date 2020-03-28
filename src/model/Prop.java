@@ -6,7 +6,7 @@ public class Prop {
 	 *
 	 * The Prop class creates objects on the map for the player to interact with.
 	 * These prop objects contain important storyline information which will help better the 
-	 * user's undertsanding of the storyline and provide them with important hints and information to 
+	 * user's understanding of the storyline and provide them with important hints and information to 
 	 * win the game. The intention of the props is to add more atmosphere to the game while remaining purposeful. 
 	 *
 	 */
@@ -20,7 +20,7 @@ public class Prop {
 			+ " full of books on the ocult.";
 
 	/**
-	 * This is the copy contructor for Prop.
+	 * This is the copy constructor for Prop.
 	 *
 	 * @param prop Prop object to be copied
 	 */
@@ -56,7 +56,7 @@ public class Prop {
 	}
 	
 	/**
-	 * The getX methos is a getter method to retrive a prop's x-value.
+	 * The getX methods is a getter method to retrieve a prop's x-value.
 	 * The x-value is required to give the prop it's x position on the level map.
 	 * @return int X position
 	 */
@@ -65,7 +65,7 @@ public class Prop {
 	}
 	
 	/**
-	 * The getY methos is a getter method to retrive a prop's y-value.
+	 * The getY methods is a getter method to retrieve a prop's y-value.
 	 * The y-value is required to give the prop it's x position on the level map.
 	 * @return int Y position
 	 */
