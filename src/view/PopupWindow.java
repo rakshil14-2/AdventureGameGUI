@@ -1,6 +1,11 @@
 package view;
 
 import java.io.IOException;
+/**
+ * This class used to generate pop up windows 
+ * There are three different display methods that depending on their parameter do different things
+ * On displays a puzzle window, one displays a prop window and the other a story window
+ */
 
 import controller.PropController;
 import controller.PuzzleController;
@@ -79,7 +84,13 @@ public class PopupWindow {
 
 	}
 	
-	
+	/**
+	 * This display method is for making a pop up window for the intro and outro text of the story 
+	 * It gets a string as a story and title for the window
+	 * @param title is a string for the title of the window
+	 * @param story a string that is the story or text that will show up in the pop up window
+	 * @throws IOException is an exception thrown when opening the fxml file
+	 */
 	public void display(String title,String story) throws IOException {
 		Stage window = new Stage();
 
@@ -88,7 +99,7 @@ public class PopupWindow {
 		window.setTitle(title);
 		window.setMinWidth(250);
 
-		// load the scene from the Prop.fxml file
+		// load the scene from the TextWindow.fxml file
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("TextWindow.fxml"));
 		Parent root = loader.load();
 		StoryController controller = loader.<StoryController>getController();
