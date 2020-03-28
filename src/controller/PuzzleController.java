@@ -55,7 +55,7 @@ public class PuzzleController{
 	 * @param p is an object Puzzle for which a new window is created.
 	 */
 	public	void setData(Puzzle p) {
-		question.setText(p.getQuestion());
+		question.setText(p.getText());
 		puzzleAnswer = p.getAnswer();
 	}
 	
