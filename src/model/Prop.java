@@ -1,34 +1,24 @@
 package model;
 
-public class Prop {
+public class Prop extends GameObject{//Prop class inherited from GameObject class
 	
 	/**
 	 *
 	 * The Prop class creates objects on the map for the player to interact with.
 	 * These prop objects contain important storyline information which will help better the 
-	 * user's understanding of the storyline and provide them with important hints and information to 
+	 * user's undertsanding of the storyline and provide them with important hints and information to 
 	 * win the game. The intention of the props is to add more atmosphere to the game while remaining purposeful. 
 	 *
 	 */
 
-	// xPos/yPos for interaction on map once collision detection is implemented
-	private int xPos = 0;
-	private int yPos = 0;
-	// description is a string containing the props text
-	private String description  = "Put object descriptive text here."
-			+ "\n eg. \"You look at an old oak bookcase, you note that it is"
-			+ " full of books on the ocult.";
-
 	/**
-	 * This is the copy constructor for Prop.
+	 * This is the copy contructor for Prop.
 	 *
 	 * @param prop Prop object to be copied
 	 */
 	public Prop(Prop prop)
 	{
-		xPos = prop.getX();
-		yPos = prop.getY();
-		description = prop.getDescription();	
+		super(prop);
 	}
 	
 	/**
@@ -39,9 +29,7 @@ public class Prop {
 	 * @param y integer representing y position
 	 */
 	public Prop(String des, int x, int y) {
-		xPos = x;
-		yPos = y;
-		description = des;	
+		super(x,y,des);
 	} 
 	
 	
@@ -51,25 +39,25 @@ public class Prop {
 	 *
 	 * @return string representing the description of the Prop object
 	 */
-	public String getDescription() {
-		return description;
-	}
-	
-	/**
-	 * The getX methods is a getter method to retrieve a prop's x-value.
-	 * The x-value is required to give the prop it's x position on the level map.
-	 * @return int X position
-	 */
-	public int getX() {
-		return xPos;
-	}
-	
-	/**
-	 * The getY methods is a getter method to retrieve a prop's y-value.
-	 * The y-value is required to give the prop it's x position on the level map.
-	 * @return int Y position
-	 */
-	public int getY() {
-		return yPos;
-	}			
+//	public String getDescription() {
+//		return description;
+//	}
+//	
+//	/**
+//	 * The getX methos is a getter method to retrive a prop's x-value.
+//	 * The x-value is required to give the prop it's x position on the level map.
+//	 * @return int X position
+//	 */
+//	public int getX() {
+//		return super.getX();//Call parent class Getter method
+//	}
+//	
+//	/**
+//	 * The getY methos is a getter method to retrive a prop's y-value.
+//	 * The y-value is required to give the prop it's x position on the level map.
+//	 * @return int Y position
+//	 */
+//	public int getY() {
+//		return super.getY();
+//	}	//Call parent class Getter method
 }
