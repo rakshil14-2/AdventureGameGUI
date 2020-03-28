@@ -274,7 +274,7 @@ public class Level {
 	}
 	
 	/**
-	 *  The getProp method generates the levels props.
+	 *  The getProp method generates the levels' props.
 	 *  @param propNum is an integer representing the prop in the array.
 	 *  @return Prop object.
 	 */	
@@ -284,22 +284,34 @@ public class Level {
 		return tProp;
 	}
 
-
+	/**
+	 * The getLevelIntroText method is a getter for the levels' intro text.
+	 * Prior to the generation of the map, intro text will be displayed.
+	 * @return string of a level's intro text
+	 */
 	public String getLevelIntroText() {
 		return levelIntroText;
 	}
 
-
+	/**
+	 * The setLevelIntroText method is a setter to set the intro text of a level.
+	 */
 	public void setLevelIntroText(String levelIntroText) {
 		this.levelIntroText = levelIntroText;
 	}
 
-
+	/**
+	 * The getLevelExitText method is a getter for the levels' exiting text.
+	 * When the current level is completed, exit (outro) text will be displayed
+	 * @return string of a level's exit text
+	 */
 	public String getLevelExitText() {
 		return levelExitText;
 	}
 
-
+	/**
+	 * The setLevelExitText method is a setter to set the exit text of a level.
+	 */
 	public void setLevelExitText(String levelExitText) {
 		this.levelExitText = levelExitText;
 	}
