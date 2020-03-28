@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.Prop;
+import model.GameObject;
 
 /**
 * The PropController class handles the text for the props from the fxml files.
@@ -35,7 +36,7 @@ public class PropController {
 	* @param i is a string which contains an image to be loaded with the prop.
 	*/
 	public	void setData(Prop p,String i) {
-		propText.setText(p.getDescription());
+		propText.setText(p.getText());
 		Image r = new Image(i);
 		img.setImage(r);
 	}
