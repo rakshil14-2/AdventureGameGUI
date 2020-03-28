@@ -105,7 +105,7 @@ public class Level1Controller implements Initializable{
 	}
 	/**
 	 * The initialize method will generate level 1 props and puzzles,
-	 * as well as an introduction text.
+	 * as well as an introduction and outro text.
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1)  {
