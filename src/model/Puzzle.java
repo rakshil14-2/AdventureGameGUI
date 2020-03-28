@@ -1,7 +1,7 @@
 package model;
 import java.util.Scanner;
 
-public class Puzzle {
+public class Puzzle extends GameObject{//Puzzle class inherited from GameObject class
 	
 	/**
 	 * The Puzzle Class
@@ -14,11 +14,8 @@ public class Puzzle {
 	
 	//boolean solved is to check if a puzzle is solved
 	private boolean solved;
-	//x and y position of the puzzle for its map location
-	private int xPos;
-	private int yPos;
 	//puzzle question and answer strings
-	private String question, answer;
+	private String  answer;
 	
 	
 	/**
@@ -26,10 +23,8 @@ public class Puzzle {
 	 * @param p is a Puzzle to be copied.
 	 */
 	public Puzzle(Puzzle p) {
+		super(p);
 		this.answer = p.answer ;
-		this.question = p.question;
-		this.xPos = p.xPos;
-		this.yPos = p.yPos;
 		this.solved = p.solved;
 	}
 	
@@ -41,9 +36,7 @@ public class Puzzle {
 	 * @param a is a String for a puzzle's answer.
 	 */
 	public Puzzle(int _x,int _y,String q,String a) {
-		this.xPos = _x;
-		this.yPos = _y;
-		this.question = q;
+		super(_x,_y,q);
 		this.answer = a;
 		solved = false;
 	}
@@ -57,32 +50,32 @@ public class Puzzle {
 		return solved;
 	}
 	
-	/**
-	 * The getX method is a getter for a puzzle's x position on the level map.
-	 * @return integer of the puzzle's x position.
-	 */
-	public int getX()
-	{
-		return xPos;
-	}	
-	
-	/**
-	 * The getY method is a getter for a puzzle's y position on the level map.
-	 * @return integer of the puzzle's y position.
-	 */
-	public int getY() {
-		return yPos;
-	}
-	
-	/**
-	 * The getQuestion method is a getter for a puzzle question.
-	 * The question for each puzzle has a correct answer.
-	 * @return String of puzzles question
-	 */
-	public String getQuestion() {
-		return question;
-	}
-	
+//	/**
+//	 * The getX method is a getter for a puzzle's x position on the level map.
+//	 * @return integer of the puzzle's x position.
+//	 */
+//	public int getX()
+//	{
+//		return super.getY();
+//	}//Call parent class Getter method
+//	
+//	/**
+//	 * The getY method is a getter for a puzzle's y position on the level map.
+//	 * @return integer of the puzzle's y position.
+//	 */
+//	public int getY() {
+//		return super.getY();
+//	}//Call parent class Getter method
+//	
+//	/**
+//	 * The getQuestion method is a getter for a puzzle question.
+//	 * The question for each puzzle has a correct answer.
+//	 * @return String of puzzles question
+//	 */
+//	public String getQuestion() {
+//		return question;
+//	}
+//	
 	/**
 	 * The getAnswer method is a getter for a puzzle answer.
 	 * The answer matches with a given puzzle question.
