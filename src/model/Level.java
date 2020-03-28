@@ -20,7 +20,7 @@ public class Level {
 	/**
 	 *
 	 * Level constructor
-	 * The Level contructor gets all the attributes for a level level and implements them.
+	 * The Level constructor gets all the attributes for a level level and implements them.
 	 * The elements are different for each individual level but they all include different 
 	 * text, puzzles and props.
 	 *
@@ -39,7 +39,7 @@ public class Level {
 	
 	/**
 	 * getLevelIntroText is a private getter method to generate the introduction text for the levels.
-	 * Each level has varying text for the begginning of the levels to give the user a stornger understanding of what 
+	 * Each level has varying text for the beginning of the levels to give the user a stronger understanding of what 
 	 * is going on in the storyline. It may also contain useful information for solving puzzles.
 	 * The method uses a switch statement with cases to make sure each level gets their respective introduction text.
 	 *
@@ -149,7 +149,7 @@ public class Level {
 					"New Years Eve");
 			Puzzle puzzle1_2 = new Puzzle(0,0,"You kept looking through the desk and found a drawer with a safe in it. Shoot! \r\n" + 
 					"It's locked. If only the code was written somewhere. a ha! It is.  \r\n"+
-					"Maybe? This is a 4 number code but you see a note with 8 numbers on it…. Maybe this is some kind \r\n" + 
+					"Maybe? This is a 4 number code but you see a note with 8 numbers on it. Maybe this is some kind \r\n" + 
 					"of a key. \r\n" + 
 					"\r\n" + 
 					"2  1  3  2  7  1  4  2 ", 
@@ -163,7 +163,7 @@ public class Level {
 					+ "cipher that shows his name on this paper.\n\n"
 					+ "The hint is 'EJTKU'. And the algorithm is X(alphabetic index)-2.",
 					"Chris");
-			puzList.add(puzzle1_1);
+			puzList.add( puzzle1_1);
 			puzList.add(puzzle1_2);
 			puzList.add(puzzle1_3);
 			break;
