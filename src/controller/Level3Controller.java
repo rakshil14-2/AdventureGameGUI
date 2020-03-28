@@ -140,7 +140,7 @@ public class Level3Controller implements Initializable {
 	}
 	/**
 	 * The initialize method will generate level 3 props and puzzles
-	 * as well as introduction text.
+	 * as well as introduction and outro text.
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
