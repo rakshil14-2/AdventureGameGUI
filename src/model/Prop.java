@@ -39,25 +39,5 @@ public class Prop extends GameObject{//Prop class inherited from GameObject clas
 	 *
 	 * @return string representing the description of the Prop object
 	 */
-//	public String getDescription() {
-//		return description;
-//	}
-//	
-//	/**
-//	 * The getX methos is a getter method to retrive a prop's x-value.
-//	 * The x-value is required to give the prop it's x position on the level map.
-//	 * @return int X position
-//	 */
-//	public int getX() {
-//		return super.getX();//Call parent class Getter method
-//	}
-//	
-//	/**
-//	 * The getY methos is a getter method to retrive a prop's y-value.
-//	 * The y-value is required to give the prop it's x position on the level map.
-//	 * @return int Y position
-//	 */
-//	public int getY() {
-//		return super.getY();
-//	}	//Call parent class Getter method
+
 }
