@@ -50,32 +50,6 @@ public class Puzzle extends GameObject{//Puzzle class inherited from GameObject 
 		return solved;
 	}
 	
-//	/**
-//	 * The getX method is a getter for a puzzle's x position on the level map.
-//	 * @return integer of the puzzle's x position.
-//	 */
-//	public int getX()
-//	{
-//		return super.getY();
-//	}//Call parent class Getter method
-//	
-//	/**
-//	 * The getY method is a getter for a puzzle's y position on the level map.
-//	 * @return integer of the puzzle's y position.
-//	 */
-//	public int getY() {
-//		return super.getY();
-//	}//Call parent class Getter method
-//	
-//	/**
-//	 * The getQuestion method is a getter for a puzzle question.
-//	 * The question for each puzzle has a correct answer.
-//	 * @return String of puzzles question
-//	 */
-//	public String getQuestion() {
-//		return question;
-//	}
-//	
 	/**
 	 * The getAnswer method is a getter for a puzzle answer.
 	 * The answer matches with a given puzzle question.
