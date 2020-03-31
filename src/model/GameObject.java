@@ -1,28 +1,88 @@
 package model;
 
+
 public abstract class GameObject {//Declare Abstract Class GameObject
+	/*
+	 * GameObject is a abstract class,
+	 * Which is a parent class of prop and puzzle.
+	 * it has all the instance variables of prop and puzzle
+	 * 
+	 * */
+	
     protected int xPos = 0;//Declare and initialize xpos Variable
     protected int yPos = 0;//Declare and initialize ypos Variable
-    private String text;
+    private String text;//Declare text Variable
+    
+    
+    
+    
+    /**
+	 * The GameObject object constructor
+	 * To help place the prop and puzzle in the respective location and give them the relative decription and answer.
+	 * @param t prop description text and Question for puzzle
+	 * @param x integer representing x position
+	 * @param y integer representing y position
+	 */
     public GameObject(int x,int y,String t) {
     	this.xPos = x;
     	this.yPos = y;
     	this.text = t;
     }
+    
+    
+    
+    
+    /**
+	 * This is the copy constructor for GameObject.
+	 *
+	 * @param g GameObject object to be copied
+	 */
     public GameObject(GameObject g) {
     	this.xPos=g.xPos;
     	this.yPos = g.yPos;
     	this.text=g.text;
     }
-    public int getY()//Getter Method for ypos Variale
+    
+    
+    
+    
+    /*
+     * Getter Method for ypos Variale
+     * @return ypos Variable
+     */
+    public int getY()
     {
-        return yPos;//Return ypos Variable
+        return yPos;
     }
-    public int getX()//Getter Method for xpos Variale
+    
+    
+    
+    
+    
+    /*
+     * Getter Method for xpos Variale
+     * @return xpos Variable
+     * 
+     * */
+    public int getX()
     {
-        return xPos;//Return xpos Variable
+        return xPos;
     }
+    
+    
+    
+    
+    
+    /*
+     * Getter Method for text Variale
+     * @return text Variable
+     * 
+     * */
     public String getText() {
     	return this.text;
     }
 }
+
+
+
+
