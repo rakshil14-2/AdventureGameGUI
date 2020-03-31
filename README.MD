@@ -79,7 +79,9 @@ Files in this project are seperated into packages:
 	* MainMenuController.java
 	* PropController.java
 	* PuzzleController.java
+	* StoryController.java
 * Package 3: model
+	* GameObject.java
 	* GameClock.java
 	* Level.java
 	* Prop.java
