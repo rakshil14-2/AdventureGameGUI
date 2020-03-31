@@ -85,6 +85,7 @@ Files in this project are seperated into packages:
 		* application.css
 
 	Package 2: controller
+	
 		* GameOverController.java
 		* Level1Controller.java
 		* Level2Controller.java
@@ -92,9 +93,11 @@ Files in this project are seperated into packages:
 		* MainMenuController.java
 		* PropController.java
 		* PuzzleController.java
+		* StoryController.java
 
 	Package 3: model
-
+		
+		* GameObject.java
 		* GameClock.java
 		* Level.java
 		* Prop.java
@@ -136,11 +139,12 @@ Files in this project are seperated into packages:
 		* Level1.fxml
 		* Level2.fxml
 		* Level3.fxml
+		* LevelScene.fxml
 		* MainMenu.fxml
+		* PopUpWindow.java
 		* Prop.fxml
-		* PropWindow.java
 		* Puzzle.fxml
-		* PuzzleWindow.java
+		* TextWindow.fxml
 		* Won.fxml
 
 	Other files:
