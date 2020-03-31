@@ -49,9 +49,9 @@
                   <Image url="@/photos/Diary.png" />
                </image>
             </ImageView>
-            <Label fx:id="label" layoutX="81.0" layoutY="313.0" prefHeight="26.0" prefWidth="126.0" />
-            <Label layoutX="453.0" layoutY="157.0" prefHeight="42.0" prefWidth="95.0" />
-            <Label fx:id="lockDoor" layoutX="463.0" layoutY="167.0" prefHeight="42.0" prefWidth="95.0" />
+            <Label fx:id="label" layoutX="81.0" layoutY="313.0" />
+            <Label layoutX="453.0" layoutY="157.0" />
+            <Label fx:id="lockDoor" layoutX="463.0" layoutY="167.0" />
          </children>
       </Pane>
    </center>
