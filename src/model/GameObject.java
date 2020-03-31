@@ -2,12 +2,12 @@ package model;
 
 
 public abstract class GameObject {//Declare Abstract Class GameObject
-	/*
+	/**
 	 * GameObject is a abstract class,
 	 * Which is a parent class of prop and puzzle.
 	 * it has all the instance variables of prop and puzzle
 	 * 
-	 * */
+	 */
 	
     protected int xPos = 0;//Declare and initialize xpos Variable
     protected int yPos = 0;//Declare and initialize ypos Variable
@@ -46,9 +46,9 @@ public abstract class GameObject {//Declare Abstract Class GameObject
     
     
     
-    /*
-     * Getter Method for ypos Variale
-     * @return ypos Variable
+    /**
+     * Getter Method for ypos variable
+     * @return ypos variable
      */
     public int getY()
     {
@@ -59,9 +59,9 @@ public abstract class GameObject {//Declare Abstract Class GameObject
     
     
     
-    /*
-     * Getter Method for xpos Variale
-     * @return xpos Variable
+    /**
+     * Getter Method for xpos variable
+     * @return xpos variable
      * 
      * */
     public int getX()
@@ -73,7 +73,7 @@ public abstract class GameObject {//Declare Abstract Class GameObject
     
     
     
-    /*
+    /**
      * Getter Method for text Variale
      * @return text Variable
      * 
