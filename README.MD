@@ -124,7 +124,6 @@ Files in this project are seperated into packages:
 	* PopUpWindow.java
 	* Prop.fxml
 	* Puzzle.fxml
-	* PuzzleWindow.java
 	* TextWindow.fxml
 	* Won.fxml
 * Other files:
