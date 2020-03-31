@@ -119,10 +119,13 @@ Files in this project are seperated into packages:
 	* Level1.fxml
 	* Level2.fxml
 	* Level3.fxml
+	* LevelScene.fxml
 	* MainMenu.fxml
 	* PopUpWindow.java
 	* Prop.fxml
 	* Puzzle.fxml
+	* PuzzleWindow.java
+	* TextWindow.fxml
 	* Won.fxml
 * Other files:
 	* .classpath
