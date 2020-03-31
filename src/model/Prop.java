@@ -1,7 +1,7 @@
 package model;
 
 
-/*
+/**
  * The Prop class creates objects on the map for the player to interact with.
  * These prop objects contain important storyline information which will help better the user's 
  * understanding of the storyline and provide them with important hints and information to win the game. The intention of the props is to add more atmosphere to the game while remaining purposeful.
