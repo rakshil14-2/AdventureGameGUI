@@ -117,11 +117,13 @@ Files in this project are seperated into packages:
 	* Level1.fxml
 	* Level2.fxml
 	* Level3.fxml
+	* LevelScene.fxml
 	* MainMenu.fxml
 	* Prop.fxml
 	* PropWindow.java
 	* Puzzle.fxml
 	* PuzzleWindow.java
+	* TextWindow.fxml
 	* Won.fxml
 * Other files:
 	* .classpath
