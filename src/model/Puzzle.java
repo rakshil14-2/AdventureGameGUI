@@ -1,16 +1,16 @@
 package model;
 import java.util.Scanner;
 
+
+/**
+ * The Puzzle Class grabs the questions and answers for the several puzzles. Checks to see that they
+ * are solved.
+ * The player solve puzzles to play the game, and by solving enough puzzles are able to unlock the 
+ * level door to move on to the next level. Every puzzle in a level has to be solved before the door can 
+ * be unlocked.
+ */
+
 public class Puzzle extends GameObject{//Puzzle class inherited from GameObject class
-	
-	/**
-	 * The Puzzle Class
-	 * Players solve puzzles to play the game, and by solving puzzles are able to 
-	 * unlock the level door to move on to the next level. Every puzzle in a level has to be solved 
-	 * before the door can be unlocked. This class gets the questions and answers for the puzzles 
-	 * and checks that they are solved.
-	 */
-	
 	
 	//boolean solved is to check if a puzzle is solved
 	private boolean solved;
@@ -20,6 +20,7 @@ public class Puzzle extends GameObject{//Puzzle class inherited from GameObject 
 	
 	/**
 	 * This is the Puzzle copy constructor.
+	 * 
 	 * @param p is a Puzzle to be copied.
 	 */
 	public Puzzle(Puzzle p) {
@@ -30,6 +31,7 @@ public class Puzzle extends GameObject{//Puzzle class inherited from GameObject 
 	
 	/**
 	 *Puzzle class constructor
+	 * 
 	 * @param _x is an int for a puzzle's x value.
 	 * @param _y is an int for a puzzle's y value.
 	 * @param q is a String for a puzzle's question.
@@ -44,6 +46,7 @@ public class Puzzle extends GameObject{//Puzzle class inherited from GameObject 
 	
 	/**
 	 * isSolved is a getter method which to checks if a puzzle is solved.
+	 * 
 	 * @return boolean solved (true if puzzle is solved).
 	 */
 	public boolean isSolved() {
@@ -53,8 +56,8 @@ public class Puzzle extends GameObject{//Puzzle class inherited from GameObject 
 	/**
 	 * The getAnswer method is a getter for a puzzle answer.
 	 * The answer matches with a given puzzle question.
-	 * The answer the user inputs has to match tghis answer for a puzzle in order to solve
-	 * the puzzle and advance in the game.
+	 * The answer the user inputs has to match tghis answer for a puzzle in order to solve the 
+	 * puzzle and advance in the game.
 	 *
 	 * @return string of puzzle's answer
 	 */
