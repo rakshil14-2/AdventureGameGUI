@@ -26,12 +26,28 @@ import view.PopupWindow;
  * 
  */
 public class Level1Controller implements Initializable{
-	@FXML ImageView notePuzzle,lockPuzzle,invitaionPuzzle,door;
-	@FXML Label lockDoor;
-	Puzzle lock;
-	boolean puzzle1Solved,puzzle2Solved,puzzle3Solved;
-	Level things;
+	@FXML private ImageView notePuzzle,lockPuzzle,invitaionPuzzle,door;
+	private Puzzle lock;
+	private boolean puzzle1Solved,puzzle2Solved,puzzle3Solved;
+	private Level things;
 
+	
+	/**
+	 * The initialize method will generate level 1 props and puzzles,
+	 * as well as an introduction and outro text.
+	 */
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1)  {
+		things = new Level(1);
+		PopupWindow intro = new PopupWindow();
+		try {
+			intro.display("Level 1 Intro", things.getLevelIntroText(),"F3B566");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	/**
 	 * 
 	 * This method handles the event on the lock image in the level 1 scene
@@ -42,9 +58,16 @@ public class Level1Controller implements Initializable{
 	public void lockClick() {
 
 		PopupWindow puzzle1Window = new PopupWindow();
-		Puzzle puzzle_1 = things.getPuzzle(2);
+		Puzzle puzzle_1 = new Puzzle(things.getPuzzle(2));
 		try {
-			puzzle1Solved = puzzle1Window.display("Lock Puzzle", puzzle_1);
+			// if the puzzle has been solved before this will prevent the user from opening the window again
+			// instead there will be a pop up wondow that says they already solved this puzzle
+			if(puzzle1Solved) {
+				PopupWindow doorLocked = new PopupWindow();
+				doorLocked.display("Puzzle already solved","You have already solved this puzzle!","05C8ED");
+			}
+			else
+				puzzle1Solved = puzzle1Window.display("Lock Puzzle", puzzle_1);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}	
@@ -56,10 +79,17 @@ public class Level1Controller implements Initializable{
 	 * and then the user can try to complete the puzzle
 	 */
 	public void noteClick() {
+		PopupWindow puzzle1 = new PopupWindow();
+		lock = new Puzzle(things.getPuzzle(3));
 		try {
-			PopupWindow puzzle1 = new PopupWindow();
-			lock = things.getPuzzle(3);
-			puzzle3Solved = puzzle1.display("Note Cipher", lock);
+			// if the puzzle has been solved before this will prevent the user from opening the window again
+			// instead there will be a pop up wondow that says they already solved this puzzle
+			if(puzzle3Solved) {
+				PopupWindow doorLocked = new PopupWindow();
+				doorLocked.display("Puzzle already solved","You have already solved this puzzle!","05C8ED");
+			}
+			else
+				puzzle3Solved = puzzle1.display("Note Cipher", lock);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}	
@@ -72,8 +102,15 @@ public class Level1Controller implements Initializable{
 	 */
 	public void invitationClick() {
 		PopupWindow puzzle2Window = new PopupWindow();
-		Puzzle puzzle_2 = things.getPuzzle(1);
+		Puzzle puzzle_2 =new Puzzle(things.getPuzzle(1));
 		try {
+			// if the puzzle has been solved before this will prevent the user from opening the window again
+			// instead there will be a pop up wondow that says they already solved this puzzle
+			if(puzzle2Solved) {
+				PopupWindow doorLocked = new PopupWindow();
+				doorLocked.display("Puzzle already solved","You have already solved this puzzle!","05C8ED");
+			}
+			else
 			puzzle2Solved = puzzle2Window.display("Invitaion Puzzle", puzzle_2);
 		} catch (IOException e1) {
 			e1.printStackTrace();
@@ -99,24 +136,10 @@ public class Level1Controller implements Initializable{
 			window.show();
 		}
 		else {
-			lockDoor.setText("DOOR IS LOCKED");
+			PopupWindow doorLocked = new PopupWindow();
+			doorLocked.display("Door is locked", "You need to solve all the puzzle before you can open this door!","ED2805");
 		}
 
-	}
-	/**
-	 * The initialize method will generate level 1 props and puzzles,
-	 * as well as an introduction and outro text.
-	 */
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1)  {
-		things = new Level(1);
-		PopupWindow intro = new PopupWindow();
-		try {
-			intro.display("Level 1 Intro", things.getLevelIntroText());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }
 
