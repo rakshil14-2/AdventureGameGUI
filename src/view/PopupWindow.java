@@ -9,10 +9,11 @@ import java.io.IOException;
 
 import controller.PropController;
 import controller.PuzzleController;
-import controller.StoryController;
+import controller.TextController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Prop;
@@ -89,9 +90,10 @@ public class PopupWindow {
 	 * It gets a string as a story and title for the window
 	 * @param title is a string for the title of the window
 	 * @param story a string that is the story or text that will show up in the pop up window
+	 * @param color is a string for the hex color of the background
 	 * @throws IOException is an exception thrown when opening the fxml file
 	 */
-	public void display(String title,String story) throws IOException {
+	public void display(String title,String story,String color) throws IOException {
 		Stage window = new Stage();
 
 		//Block events to other windows
@@ -102,9 +104,9 @@ public class PopupWindow {
 		// load the scene from the TextWindow.fxml file
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("TextWindow.fxml"));
 		Parent root = loader.load();
-		StoryController controller = loader.<StoryController>getController();
-		controller.setStory(story);
-		
+		TextController controller = loader.<TextController>getController();
+		controller.setText(story);
+		controller.setBackgroundColor(color);
 		//Display window and wait for it to be closed
 		Scene scene = new Scene(root);
 		window.setScene(scene);
