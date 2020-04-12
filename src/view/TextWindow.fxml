@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane style="-fx-background-color: #F3B566;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StoryController">
+<Pane fx:id="pane" style="-fx-background-color: #F3B566;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TextController">
    <children>
       <Label fx:id="story" layoutX="1.0" layoutY="3.0" text="Text goes here" textAlignment="CENTER">
          <padding>
