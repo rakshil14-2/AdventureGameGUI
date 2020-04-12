@@ -26,14 +26,28 @@ import view.PopupWindow;
  */
 
 public class Level3Controller implements Initializable {
-	@FXML ImageView diary,note,footnote,knife;
-	@FXML 
-	Label label,lockDoor;
+	@FXML private ImageView diary,note,footnote,knife;
 
-	Prop prop;
-	boolean puzzle1Solved,puzzle2Solved;
-	Level things;
-
+	private Prop prop;
+	private boolean puzzle1Solved,puzzle2Solved;
+	private Level things;
+	
+	/**
+	 * The initialize method will generate level 3 props and puzzles
+	 * as well as introduction and outro text.
+	 */
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		things = new Level(3);
+		PopupWindow intro = new PopupWindow();
+		try {
+			intro.display("Level 3 Intro", things.getLevelIntroText(),"F3B566");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	/**
 	 * The knifeClick method handles the mouse click event on the knife image in the level 3 scene
 	 * It opens a puzzle window if the image of the knife is clicked,
@@ -44,10 +58,21 @@ public class Level3Controller implements Initializable {
 	public void knifeClick() {
 
 		PopupWindow puzzle1Window = new PopupWindow();
-		Puzzle puzzle_2 = things.getPuzzle(2);
+		Puzzle puzzle_2 = new Puzzle(things.getPuzzle(2));
 		try {
 			if(puzzle1Solved) {
+				// if the puzzle has been solved before this will prevent the user from opening the window again
+				// instead there will be a pop up wondow that says they already solved this puzzle
+				if(puzzle2Solved) {
+					PopupWindow doorLocked = new PopupWindow();
+					doorLocked.display("Puzzle already solved","You have already solved this puzzle!","05C8ED");
+				}else {
 				puzzle2Solved = puzzle1Window.display("Who Is the Killer?", puzzle_2);
+				}
+			}
+			else {
+				PopupWindow doorLocked = new PopupWindow();
+				doorLocked.display("Puzzle not solved","You need to solve the note puzzle first before you can open this!","ED2805");
 			}
 		} catch (IOException e1) {
 			e1.printStackTrace();
@@ -63,12 +88,13 @@ public class Level3Controller implements Initializable {
 		try {
 			if(puzzle1Solved) {
 				PopupWindow prop1 = new PopupWindow();
-				prop = things.getProp(2);
+				prop = new Prop(things.getProp(2));
 				prop1.display("What does it mean??", prop,"/photos/will.jpg");
-				label.setText("");
+				
 			}
 			else {
-				label.setText("You need to solve they puzzle first");
+				PopupWindow doorLocked = new PopupWindow();
+				doorLocked.display("Puzzle not solved","You need to solve the note puzzle first before you can open this!","ED2805");
 			}
 
 		} catch (IOException e1) {
@@ -84,9 +110,15 @@ public class Level3Controller implements Initializable {
 	 */
 	public void noteClick() {
 		PopupWindow puzzle1Window = new PopupWindow();
-		Puzzle puzzle_1 = things.getPuzzle(1);
+		Puzzle puzzle_1 = new Puzzle( things.getPuzzle(1));
 		try {
-			puzzle1Solved = puzzle1Window.display("Small Notes", puzzle_1);
+			// if the puzzle has been solved before this will prevent the user from opening the window again
+			// instead there will be a pop up wondow that says they already solved this puzzle
+			if(puzzle1Solved) {
+				PopupWindow doorLocked = new PopupWindow();
+				doorLocked.display("Puzzle already solved","You have already solved this puzzle!","05C8ED");
+			}else
+				puzzle1Solved = puzzle1Window.display("Small Notes", puzzle_1);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}		
@@ -101,7 +133,7 @@ public class Level3Controller implements Initializable {
 		try {
 
 			PopupWindow prop1 = new PopupWindow();
-			prop = things.getProp(1);
+			prop = new Prop(things.getProp(1));
 
 			prop1.display("Diary notes", prop,"/photos/Diary.jpg");
 
@@ -123,7 +155,7 @@ public class Level3Controller implements Initializable {
 		if ( puzzle1Solved && puzzle2Solved )
 		{
 			PopupWindow outro = new PopupWindow();
-			outro.display("Level 3 outro", things.getLevelExitText());
+			outro.display("Level 3 outro", things.getLevelExitText(),"F3B566");
 			// load the scene from the Won.fxml file
 			Parent root = FXMLLoader.load(getClass().getResource("/view/Won.fxml"));
 			Scene gameover=new Scene(root,600,400);
@@ -134,23 +166,10 @@ public class Level3Controller implements Initializable {
 		}
 
 		else {
-			lockDoor.setText("DOOR IS LOCKED");
+			PopupWindow doorLocked = new PopupWindow();
+			doorLocked.display("Door is locked", "You need to solve all the puzzle before you can open this door!","ED2805");
 		}
 
 	}
-	/**
-	 * The initialize method will generate level 3 props and puzzles
-	 * as well as introduction and outro text.
-	 */
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		things = new Level(3);
-		PopupWindow intro = new PopupWindow();
-		try {
-			intro.display("Level 3 Intro", things.getLevelIntroText());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+
 }
