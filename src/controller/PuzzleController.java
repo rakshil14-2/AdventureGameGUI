@@ -1,10 +1,7 @@
 package controller;
 
 //importing libraries
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -65,7 +62,7 @@ public class PuzzleController{
 	 * The update Answer button is a button which takes a mouse click event from the user.
 	 * The method checks to see if the user inputed the correct answer in the text field for the puzzle,
 	 * and will change the label according to that. If the correct answer is inputted it tells the user
-	 * they are correct, and otherwise if their inputted answer is incorrect it asks the user to make 
+	 * they are correct, and otherwise if their inputed answer is incorrect it asks the user to make 
 	 * another attempt at solving the puzzle.
 	 *
 	 */
