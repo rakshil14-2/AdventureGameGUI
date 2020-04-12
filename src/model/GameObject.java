@@ -9,8 +9,8 @@ public abstract class GameObject {//Declare Abstract Class GameObject
 	 * 
 	 */
 	
-    protected int xPos = 0;//Declare and initialize xpos Variable
-    protected int yPos = 0;//Declare and initialize ypos Variable
+    private int xPos = 0;//Declare and initialize xpos Variable
+    private int yPos = 0;//Declare and initialize ypos Variable
     private String text;//Declare text Variable
     
     
