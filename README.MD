@@ -181,9 +181,38 @@ provide clues and must be solved in order to escape and win the game.
 	* gets the puzzle question, answer and handles user input from the text field to check if it is solved​
 * Puzzle Window: 
 	* when puzzle button is clicked opens a new window with a question and text field for user to input their answer
+-------------------
+# VIII. Puzzle Solutions:
+-------------------
+## Level 1
+
+### Lock Puzzle:
+	Solution: 2678
+	
+### Invitation Puzzle:
+	Solution: New Years Eve
+	
+### Cipher Puzzle:
+	Solution: Chris
+
+## Level 2
+
+### Lock Puzzle:
+	Solution : ACE
+
+### Keypad Puzzle:
+	Solution: 9
+
+## Level 3
+
+### Sticky Note Cipher Puzzle:
+	Solution: Footnotes
+
+### Dagger Puzzle (Final puzzle of game):
+	Solution: Louie
 
 -------------------
-# VIII. Contributors:
+# IX. Contributors:
 -------------------
 
 Program written by:
