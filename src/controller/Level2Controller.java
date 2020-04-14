@@ -41,7 +41,7 @@ public class Level2Controller implements Initializable{
 		things = new Level(2);
 		PopupWindow intro = new PopupWindow();
 		try {
-			intro.display("Level e Intro", things.getLevelIntroText(),"F3B566");
+			intro.display("Level 2 Intro", things.getLevelIntroText(),"F3B566");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
