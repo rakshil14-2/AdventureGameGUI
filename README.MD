@@ -228,3 +228,8 @@ Program written by:
 		for CPSC 233 Project, Winter Semester 2020.
 
 ​
+# Secondary and easy option to Build GUI using Netbeans  
+
+As I am using Netbeans due to my CS project I was not knowing to build GUI
+but with the help of Netbeans it was easy and so fast that I could build GUI
+so easily and so perfectly
